@@ -1,0 +1,1 @@
+This node will run it's child, however if the child tales longer than T seconds to finish, it will abort the child and return a failure. Otherwise, it returns the result of the child.

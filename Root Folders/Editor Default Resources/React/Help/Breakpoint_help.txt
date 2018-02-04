@@ -1,0 +1,3 @@
+This node pauses the Reactor when the game is playing in the editor.
+
+This node will not do anything in a game build, it is only designed to work in the Unity Editor.

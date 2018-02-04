@@ -1,0 +1,54 @@
+using DifferentMethods.React;
+using UnityEngine;
+[USING]
+
+namespace React.Generated {
+
+    /// <summary>
+    /// Executes child if result of [NICENAME] on the class is true.
+    /// </summary>
+    [ATTRIBUTES]
+    [System.Serializable]
+    public class [CLASSNAME] : DecoratorNode
+    {
+[FIELDS]
+
+        [COMPONENT_DEC]
+
+        protected override NodeState Execute() 
+        {
+            if([CODE]) {
+                return ExecuteNode(Child);
+            }
+            return NodeState.Continue;
+        }
+
+        public override void OnEnable() {
+            base.OnEnable();
+            [ONENABLE_CODE]
+        }
+
+        public override string ToString ()
+        {
+            return NiceName();
+        }
+
+        public static string NiceName() {
+            return "IF [NICENAME]";
+        }
+
+        public static string GetMenuPath() {
+            return "[MENUPATH]";
+        }
+
+        public static string Signature() {
+            return "[SIGNATURE]";
+        }
+        
+        public override System.Type GetWrappedType()
+        {
+            return typeof([COMPONENTTYPE]);
+        }
+
+    }
+}

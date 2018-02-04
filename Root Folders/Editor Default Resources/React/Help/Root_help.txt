@@ -1,0 +1,3 @@
+The Root node is always the first node of your tree.
+
+It runs all its children sequentially, not caring if they fail or succeed.

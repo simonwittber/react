@@ -1,0 +1,3 @@
+The selector node runs each child, and returns a success on the first child that succeeds. If a child fails, it moves on to the next child.
+
+If none of the children succeed, it returns a failure.

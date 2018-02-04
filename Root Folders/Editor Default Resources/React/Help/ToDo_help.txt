@@ -1,0 +1,4 @@
+This node, like the sequence runs each child, and returns a failure on the first child that fails. If a child succeeds, it moves on to the next child.
+
+However, next time the sequence is started, it starts where it left off, skipping previously successful nodes.
+

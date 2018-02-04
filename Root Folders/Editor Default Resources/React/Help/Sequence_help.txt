@@ -1,0 +1,3 @@
+The sequence node runs each child, and returns a failure on the first child that fails. If a child succeeds, it moves on to the next child.
+
+If none of the children fail, it returns a success.

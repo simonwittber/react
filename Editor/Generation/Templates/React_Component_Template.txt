@@ -1,0 +1,16 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using React;
+using React.Generated;
+
+public class [CLASSNAME] : ReactReactor
+{
+[DECS]
+
+	public override ReactRoot LoadReactGraph ()
+	{
+		return [CODE];
+	}
+
+}

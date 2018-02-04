@@ -1,0 +1,1 @@
+This node simply sends a message to the Unity console. It is the equivalent of the Debug.Log call.

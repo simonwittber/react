@@ -1,0 +1,5 @@
+The evolving sequence node runs each of it's children. When all children succeed, it returns a success.
+
+If a child fails, the order of the children is shuffled a number of times (this is controlled by the mutations variable). However, the first and last child will always remain in position and will not be shuffled.
+
+Generally, you want to keep the mutations parameter low, so that the sequence will evolve into an order which continually succeeds. This makes the evolving sequence node ideal for creating an adaptive AI which searches for the best solution to a problem, using slight mutations.

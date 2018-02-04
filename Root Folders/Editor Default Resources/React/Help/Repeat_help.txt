@@ -1,0 +1,1 @@
+Repeat forever. Designed to be used in a Parallel node. Will only exit if forced to by the parallel condition check.

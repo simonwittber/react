@@ -1,0 +1,1 @@
+The loop node simply executes it's child a number of times. It ignores the result of the child and always succeeds.

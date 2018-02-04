@@ -1,0 +1,1 @@
+This node will continually executes it's child until the child succeeds. It will then return a success itself.

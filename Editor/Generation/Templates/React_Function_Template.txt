@@ -1,0 +1,53 @@
+using DifferentMethods.React;
+using UnityEngine;
+[USING]
+
+namespace React.Generated {
+
+    /// <summary>
+    /// Executes method call [NICENAME] on the active gameObject, then returns a Continue state.
+    /// </summary>
+    [ATTRIBUTES]
+    [System.Serializable]
+    public class [CLASSNAME] : LeafNode
+    {
+[FIELDS]
+
+        [COMPONENT_DEC]
+
+        protected override NodeState Execute() {
+            [CODE];
+            return NodeState.Continue;
+        }
+
+        public override void OnEnable() {
+            base.OnEnable();
+            [ONENABLE_CODE]
+        }
+
+        public override string ToString ()
+        {
+            return NiceName();
+        }
+
+        public static string NiceName() {
+            return "[NICENAME]";
+        }
+
+        public static string GetMenuPath() {
+            return "[MENUPATH]";
+        }
+
+        public static string Signature() {
+            return "[SIGNATURE]";
+        }
+
+        public override System.Type GetWrappedType()
+        {
+            return typeof([COMPONENTTYPE]);
+        }
+
+        public static int leafNodeId = ReactTypeRegister.RegisterNodeClass(typeof([COMPONENTTYPE]), typeof([CLASSNAME]));
+
+    }
+}

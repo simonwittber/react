@@ -1,0 +1,3 @@
+This node randomly chooses a child to run. If that child succeeds, it returns a success. If that child fails, it picks another child to try.
+
+If no children succeed, this node returns a failure.

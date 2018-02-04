@@ -1,0 +1,3 @@
+The mutating selector executes it's children one at a time, returning a success on the first child that succeeds. When a child fails, it moves onto the next child.
+
+When a child succeeds, it moves the child to the top or bottom of the list of children depending on the policy parameter.

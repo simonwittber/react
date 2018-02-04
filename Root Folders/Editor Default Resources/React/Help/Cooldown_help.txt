@@ -1,0 +1,3 @@
+This node will only run it's child once every T seconds. This prevents the child node from being run too often.
+
+If the child node is not run because the cooldown period has not expired, this node will fail. Otherwise, this node returns the result of it's child.

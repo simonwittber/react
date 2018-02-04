@@ -1,0 +1,45 @@
+using DifferentMethods.React;
+using UnityEngine;
+[USING]
+
+namespace React.Generated {
+
+    /// <summary>
+    /// Sets [NICENAME] on the class to a value. 
+    /// [HELPTEXT]
+    /// </summary>
+    [ATTRIBUTES]
+    [System.Serializable]
+    public class [CLASSNAME] : LeafNode
+    {
+[PROPERTY_TYPE]
+
+        protected override NodeState Execute() {
+            [CODE] = this.value;
+            return NodeState.Continue;
+        }
+
+        public override string ToString ()
+        {
+            return NiceName();
+        }
+
+        public static string NiceName() {
+            return "SET [NICENAME]";
+        }
+
+        public static string GetMenuPath() {
+            return "[MENUPATH]";
+        }
+
+        public static string Signature() {
+            return "";
+        }
+
+        public override System.Type GetWrappedType()
+        {
+            return typeof([COMPONENTTYPE]);
+        }
+
+    }
+}

@@ -1,0 +1,3 @@
+This node pauses execution for a number of seconds. The variance parameter can set the proability of a +- percentage of the sleep time.
+
+Eg, T = 3, variance = 0.25 will sleep for 3 seconds, +- (3*0.25)

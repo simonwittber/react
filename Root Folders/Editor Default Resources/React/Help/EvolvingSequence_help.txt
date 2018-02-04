@@ -1,0 +1,5 @@
+When an evolving sequence starts it randomly disables half of the children. This only happens once when the tree is initialised.
+
+The node then runs each enabled child. When all children succeed, it returns a success.
+
+If a child fails, two random children will switch enabled/disabled states and a failure is returned.

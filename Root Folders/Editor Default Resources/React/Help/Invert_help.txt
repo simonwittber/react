@@ -1,0 +1,3 @@
+The invert node executes it's child, and returns the inverse of the result.
+
+For example, if the child succeeds, the invert node will return a failure. If the child fails, the invert node will return a success.

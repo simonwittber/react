@@ -1,0 +1,5 @@
+This node uses a probability to determine whether to run the child.
+
+For example, if the probability is 0.4, there is a 40% chance the child will be run. If the child is run, the chance node will return the result of the child, whether it is success or fail. 
+
+If the child is not run at all, the chance node will return a fail.

@@ -1,0 +1,3 @@
+This node executes all of it's children simulatanously. It fails or succeeds when a child fails or succeeds depending on the policy parameter.
+
+This is most often used with 2 nodes. The top node uses an UntilFailure decorator to continuously check a condition. The second node is usually a BranchNode which performs some behaviour, only while the first condition is satistifed.

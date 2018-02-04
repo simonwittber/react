@@ -1,0 +1,3 @@
+The Batch node runs each child in a single frame, only returning a failure if one of the children fails. It is designed to allow optimisation of a sequence of function nodes.
+
+It is added automatically in the optimisation phase when the tree is first loaded at runtime.

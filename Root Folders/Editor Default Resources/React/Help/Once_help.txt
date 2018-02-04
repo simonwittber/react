@@ -1,0 +1,3 @@
+This node executes it's child once, and then is disabled.
+
+It is useful for performing setup or initialisation type operations.

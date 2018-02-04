@@ -1,0 +1,5 @@
+This node stops execution of it's branch of the tree and waits for a named event to be received.
+
+This event can be triggered by calling the ReceiveEvent method on the Reactor.
+
+The event name is stored in as a public const in the generated class.

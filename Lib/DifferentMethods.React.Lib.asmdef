@@ -1,0 +1,9 @@
+{
+    "name": "DifferentMethods.React.Lib",
+    "references": [
+        "DifferentMethods.Extensions"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": []
+}

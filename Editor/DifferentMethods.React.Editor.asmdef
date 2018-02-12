@@ -1,0 +1,9 @@
+{
+    "name": "DifferentMethods.React.Editor",
+    "references": [
+        "DifferentMethods.React.Lib"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": []
+}

@@ -2,38 +2,43 @@ using DifferentMethods.React;
 using UnityEngine;
 
 
-namespace React.Generated {
+namespace React.Generated
+{
 
     /// <summary>
     /// Sets Rigidbody.angularVelocity on the active gameObject to a value. 
     /// 
     /// </summary>
-    
+
     [System.Serializable]
     public class Set_Rigidbody_angularVelocity : LeafNode
     {
         public UnityEngine.Vector3 value;
 
 
-        protected override NodeState Execute() {
+        protected override NodeState Execute()
+        {
             Context.gameObject.GetComponent<UnityEngine.Rigidbody>().angularVelocity = this.value;
             return NodeState.Continue;
         }
 
-        public override string ToString ()
+        public override string ToString()
         {
             return NiceName();
         }
 
-        public static string NiceName() {
+        public static string NiceName()
+        {
             return "SET Rigidbody.angularVelocity";
         }
 
-        public static string GetMenuPath() {
+        public static string GetMenuPath()
+        {
             return "Rigidbody/Set/angularVelocity";
         }
 
-        public static string Signature() {
+        public static string Signature()
+        {
             return "";
         }
 

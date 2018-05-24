@@ -550,12 +550,6 @@ namespace DifferentMethods.React.Editor
         void ShowNodeContextMenu()
         {
             var menu = new GenericMenu();
-            menu.AddItem(new GUIContent("Cut"), false, OnCut);
-            menu.AddItem(new GUIContent("Copy"), false, OnCopy);
-            menu.AddItem(new GUIContent("Paste"), false, OnPaste);
-            menu.AddItem(new GUIContent("Duplicate"), false, OnDuplicate);
-            menu.AddItem(new GUIContent("Delete"), false, OnDelete);
-            menu.AddSeparator("");
             if (reactor.hotNode is IParentNode)
                 menu.AddItem(new GUIContent("Add Child"), false, ShowSearchWindow);
             else
@@ -567,6 +561,13 @@ namespace DifferentMethods.React.Editor
                     continue;
                 menu.AddItem(new GUIContent("Insert Parent/" + i.menuPath), false, DecorateHotNode, i.type);
             }
+            menu.AddSeparator("");
+            menu.AddItem(new GUIContent("Cut"), false, OnCut);
+            menu.AddItem(new GUIContent("Copy"), false, OnCopy);
+            menu.AddItem(new GUIContent("Paste"), false, OnPaste);
+            menu.AddItem(new GUIContent("Duplicate"), false, OnDuplicate);
+            menu.AddItem(new GUIContent("Delete"), false, OnDelete);
+
             menu.AddSeparator("");
             menu.AddItem(new GUIContent("Edit source"), false, delegate ()
             {

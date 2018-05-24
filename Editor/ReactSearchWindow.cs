@@ -233,6 +233,8 @@ namespace DifferentMethods.React.Editor
                 if (add)
                     searchResults.Add(new SearchResult() { niceName = candidate.NiceName, candidateClass = candidate, signature = candidate.Signature });
             }
+            return;
+            //TODO: This code is far too slow 
             foreach (var i in AssetDatabase.FindAssets("t:GameObject"))
             {
                 var go = AssetDatabase.LoadAssetAtPath<GameObject>(AssetDatabase.GUIDToAssetPath(i));

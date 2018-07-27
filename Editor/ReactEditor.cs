@@ -12,6 +12,7 @@ using System.Xml.Serialization;
 using System;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Xml;
+using DifferentMethods.React.Components;
 
 namespace DifferentMethods.React.Editor
 {
@@ -58,10 +59,10 @@ namespace DifferentMethods.React.Editor
             {
                 switch (node.lastState)
                 {
-                    case NodeState.Aborted: stateColor = Color.red; break;
+                    case NodeState.Aborted: stateColor = Color.magenta; break;
                     case NodeState.Success: stateColor = Color.green; break;
-                    case NodeState.Failure: stateColor = Color.blue; break;
-                    case NodeState.Continue: stateColor = Color.yellow; break;
+                    case NodeState.Failure: stateColor = Color.red; break;
+                    case NodeState.NoResult: stateColor = Color.white; break;
                 }
                 if (node.lastState != NodeState.None)
                     stateColor.a = 0.7f * Mathf.Clamp01(1 - ((Time.time - node.lastExecuteTime)));
@@ -253,27 +254,40 @@ namespace DifferentMethods.React.Editor
             node.rect = cursor;
             if (visible)
             {
-                Texture icon = null;
-                icon = EditorGUIUtility.ObjectContent(null, node.GetWrappedType()).image;
-
-                if (node != root)
+                if (node is Comment && reactor.hotNode != node)
                 {
-                    if (icon == null)
-                        icon = GetIcon(node);
-                    var oc = new GUIContent(node.ToString());
+                    var comment = node as Comment;
+                    var oc = new GUIContent(comment.text);
                     //draw node contents
                     var size = EditorStyles.boldLabel.CalcSize(oc);
-                    oc.image = icon;
                     node.rect.width = size.x + 32;
-                    GUI.Label(node.rect, oc, EditorStyles.boldLabel);
+                    node.rect.height = size.y * 2;
+                    EditorGUI.HelpBox(node.rect, comment.text, MessageType.Info);
+                    // GUI.Label(node.rect, oc, EditorStyles.boldLabel);
                 }
-                var focus = false;
-                if (focusFirstControl && reactor.hotNode == node)
+                else
                 {
-                    focus = true;
-                    focusFirstControl = false;
+                    Texture icon = null;
+                    icon = EditorGUIUtility.ObjectContent(null, node.GetWrappedType()).image;
+                    if (node != root)
+                    {
+                        if (icon == null)
+                            icon = GetIcon(node);
+                        var oc = new GUIContent(node.ToString());
+                        //draw node contents
+                        var size = EditorStyles.boldLabel.CalcSize(oc);
+                        oc.image = icon;
+                        node.rect.width = size.x + 32;
+                        GUI.Label(node.rect, oc, EditorStyles.boldLabel);
+                    }
+                    var focus = false;
+                    if (focusFirstControl && reactor.hotNode == node)
+                    {
+                        focus = true;
+                        focusFirstControl = false;
+                    }
+                    ReactFieldEditor.DrawFields(node, focus, active: reactor.hotNode == node);
                 }
-                ReactFieldEditor.DrawFields(node, focus, active: reactor.hotNode == node);
             }
 
             var left = 0f;
@@ -519,7 +533,6 @@ namespace DifferentMethods.React.Editor
                 {
                     EditorGUI.FocusTextInControl("");
                     EditorGUIUtility.editingTextField = false;
-                    Repaint();
                 }
                 if (reactor.hotNode != null && e.button == 1)
                     schedule += ShowContextMenu;

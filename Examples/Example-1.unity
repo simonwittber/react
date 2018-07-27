@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 8
+  serializedVersion: 9
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -38,7 +38,8 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465934, g: 0.49642956, b: 0.5748249, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028374, g: 0.22571413, b: 0.3069228, a: 1}
+  m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -54,11 +55,10 @@ LightmapSettings:
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
-    serializedVersion: 9
+    serializedVersion: 10
     m_Resolution: 2
     m_BakeResolution: 40
-    m_TextureWidth: 1024
-    m_TextureHeight: 1024
+    m_AtlasSize: 1024
     m_AO: 0
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
@@ -116,9 +116,9 @@ NavMeshSettings:
 --- !u!1 &46817071
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 46817076}
   - component: {fileID: 46817075}
@@ -136,7 +136,7 @@ GameObject:
 --- !u!54 &46817072
 Rigidbody:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 46817071}
   serializedVersion: 2
@@ -151,7 +151,7 @@ Rigidbody:
 --- !u!23 &46817073
 MeshRenderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 46817071}
   m_Enabled: 1
@@ -161,6 +161,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: d27624d48ecf448f1ba2afede2a67ebf, type: 2}
   m_StaticBatchInfo:
@@ -185,7 +186,7 @@ MeshRenderer:
 --- !u!135 &46817074
 SphereCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 46817071}
   m_Material: {fileID: 0}
@@ -197,14 +198,14 @@ SphereCollider:
 --- !u!33 &46817075
 MeshFilter:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 46817071}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &46817076
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 46817071}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -217,7 +218,7 @@ Transform:
 --- !u!82 &46817078
 AudioSource:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 46817071}
   m_Enabled: 1
@@ -243,63 +244,78 @@ AudioSource:
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - serializedVersion: 2
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
       time: 1
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   panLevelCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
 --- !u!1 &201921986
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 201921988}
   - component: {fileID: 201921987}
@@ -313,7 +329,7 @@ GameObject:
 --- !u!114 &201921987
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 201921986}
   m_Enabled: 1
@@ -324,35 +340,47 @@ MonoBehaviour:
   curves:
   - serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - serializedVersion: 2
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
       time: 1
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   - serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 0
       inSlope: 0
       outSlope: -1.5
       tangentMode: 0
-    - serializedVersion: 2
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
       time: 1
       value: 1
       inSlope: -1.5
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -364,7 +392,7 @@ MonoBehaviour:
 --- !u!4 &201921988
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 201921986}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -377,9 +405,9 @@ Transform:
 --- !u!1 &589156058
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 589156062}
   - component: {fileID: 589156061}
@@ -396,7 +424,7 @@ GameObject:
 --- !u!23 &589156059
 MeshRenderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 589156058}
   m_Enabled: 1
@@ -406,6 +434,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: d27624d48ecf448f1ba2afede2a67ebf, type: 2}
   m_StaticBatchInfo:
@@ -430,7 +459,7 @@ MeshRenderer:
 --- !u!64 &589156060
 MeshCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 589156058}
   m_Material: {fileID: 13400000, guid: d9d023f216d3f4277995681b1e35d267, type: 2}
@@ -444,14 +473,14 @@ MeshCollider:
 --- !u!33 &589156061
 MeshFilter:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 589156058}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &589156062
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 589156058}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -464,7 +493,7 @@ Transform:
 --- !u!114 &589156063
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 589156058}
   m_Enabled: 1
@@ -475,9 +504,11 @@ MonoBehaviour:
   libraries: []
   goLarge: 0
   showExplorer: 0
-  hotNodePath: 0000000000000000
+  hotNodePath: 000000000000000002000000
   serializer:
     references:
+    - {fileID: 589156063}
+    - {fileID: 589156063}
     - {fileID: 589156063}
     - {fileID: 589156063}
     - {fileID: 589156063}
@@ -491,35 +522,35 @@ MonoBehaviour:
     - {fileID: 589156063}
     tokens:
     - new
-    - DifferentMethods.React.Root, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    - DifferentMethods.React.Root, DifferentMethods.React.Lib, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
     - '{'
     - Reactor
     - '}'
     - '['
     - new
-    - DifferentMethods.React.OnStart, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
+    - DifferentMethods.React.OnStart, DifferentMethods.React.Lib, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
     - '{'
     - Reactor
     - '}'
     - '['
     - new
-    - DifferentMethods.React.Sequence, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
+    - DifferentMethods.React.Sequence, DifferentMethods.React.Lib, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
     - '{'
     - Reactor
     - '}'
     - '['
     - new
-    - DifferentMethods.React.Asynchronous, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
+    - DifferentMethods.React.Asynchronous, DifferentMethods.React.Lib, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
     - '{'
     - Reactor
     - '}'
     - '['
     - new
-    - DifferentMethods.React.Log, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    - DifferentMethods.React.Log, DifferentMethods.React.Lib, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
     - '{'
     - msg
@@ -528,8 +559,24 @@ MonoBehaviour:
     - '}'
     - ']'
     - new
-    - DifferentMethods.React.SuperCall, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    - DifferentMethods.React.Asynchronous, DifferentMethods.React.Lib, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    - '{'
+    - Reactor
+    - '}'
+    - '['
+    - new
+    - DifferentMethods.React.Log, DifferentMethods.React.Lib, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+    - '{'
+    - msg
+    - Things
+    - Reactor
+    - '}'
+    - ']'
+    - new
+    - DifferentMethods.React.SuperCall, DifferentMethods.React.Lib, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
     - '{'
     - lib
     - id
@@ -538,8 +585,8 @@ MonoBehaviour:
     - '}'
     - '['
     - new
-    - DifferentMethods.React.GraftPoint, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
+    - DifferentMethods.React.GraftPoint, DifferentMethods.React.Lib, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
     - '{'
     - id
     - msg
@@ -547,7 +594,7 @@ MonoBehaviour:
     - '}'
     - '['
     - new
-    - DifferentMethods.React.Log, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    - DifferentMethods.React.Log, DifferentMethods.React.Lib, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
     - '{'
     - msg
@@ -556,8 +603,8 @@ MonoBehaviour:
     - '}'
     - ']'
     - new
-    - DifferentMethods.React.GraftPoint, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
+    - DifferentMethods.React.GraftPoint, DifferentMethods.React.Lib, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
     - '{'
     - id
     - spadd
@@ -565,7 +612,7 @@ MonoBehaviour:
     - '}'
     - '['
     - new
-    - DifferentMethods.React.Sleep, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    - DifferentMethods.React.Sleep, DifferentMethods.React.Lib, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
     - '{'
     - seconds
@@ -580,9 +627,9 @@ MonoBehaviour:
 --- !u!1 &1195908089
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 1195908091}
   - component: {fileID: 1195908090}
@@ -596,7 +643,7 @@ GameObject:
 --- !u!108 &1195908090
 Light:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1195908089}
   m_Enabled: 1
@@ -623,6 +670,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -632,7 +680,7 @@ Light:
 --- !u!4 &1195908091
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1195908089}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
@@ -645,9 +693,9 @@ Transform:
 --- !u!1 &1376697203
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 1376697208}
   - component: {fileID: 1376697207}
@@ -663,27 +711,31 @@ GameObject:
 --- !u!81 &1376697204
 AudioListener:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1376697203}
   m_Enabled: 1
 --- !u!124 &1376697205
 Behaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1376697203}
   m_Enabled: 1
 --- !u!20 &1376697207
 Camera:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1376697203}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -713,7 +765,7 @@ Camera:
 --- !u!4 &1376697208
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1376697203}
   m_LocalRotation: {x: 0.0325886, y: 0.90851325, z: 0.07208271, w: -0.41029966}

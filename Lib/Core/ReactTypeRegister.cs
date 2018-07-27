@@ -56,6 +56,7 @@ namespace DifferentMethods.React
                 if (t.type.AssemblyQualifiedName == className) return t.type;
                 if (t.type.FullName == className) return t.type;
                 if (t.type.Name == className) return t.type;
+                if (t.type.FullName.StartsWith(className)) return t.type;
             }
             return null;
         }

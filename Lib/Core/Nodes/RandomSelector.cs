@@ -33,7 +33,7 @@ namespace DifferentMethods.React
                 switch (ExecuteNode(ActiveChild))
                 {
                     case NodeState.Failure:
-                    case NodeState.Continue:
+                    case NodeState.NoResult:
                         break;
                     case NodeState.Success:
                         if (policy == RandomSequencePolicy.AlwaysShuffle || policy == RandomSequencePolicy.ShuffleOnSuccess)

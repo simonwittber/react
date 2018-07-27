@@ -16,7 +16,7 @@ namespace DifferentMethods.React
         protected override NodeState Execute()
         {
             Debug.Log($"<color=yellow><b>REACT:</b> {msg}</color>");
-            return NodeState.Continue;
+            return NodeState.NoResult;
         }
     }
 

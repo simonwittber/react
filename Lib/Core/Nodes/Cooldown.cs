@@ -20,7 +20,7 @@ namespace DifferentMethods.React
         protected override NodeState Execute()
         {
             if (Child == null)
-                return NodeState.Continue;
+                return NodeState.NoResult;
 
             var now = scaledTime ? Time.time : Time.unscaledTime;
 
@@ -29,8 +29,10 @@ namespace DifferentMethods.React
                 lastCall = scaledTime ? Time.time : Time.unscaledTime;
                 return ExecuteNode(Child);
             }
-            return NodeState.Continue;
+            return NodeState.NoResult;
         }
     }
+
+
 
 }

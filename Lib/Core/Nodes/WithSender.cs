@@ -16,7 +16,7 @@ namespace DifferentMethods.React
         protected override NodeState Execute()
         {
             if (Child == null || nodeParent.Context.sender == null)
-                return NodeState.Continue;
+                return NodeState.NoResult;
             SetActiveGameObject(nodeParent.Context.sender);
             return ExecuteNode(Child);
         }

@@ -25,7 +25,7 @@ namespace DifferentMethods.React
             {
                 Reactor.QueueForExecution(Child);
             }
-            return NodeState.Continue;
+            return NodeState.NoResult;
         }
     }
 

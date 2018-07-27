@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace DifferentMethods.React
+namespace DifferentMethods.React.Components
 {
     public class Tween : MonoBehaviour
     {
@@ -30,7 +30,7 @@ namespace DifferentMethods.React
 
         public static void Move(Transform transform, Vector3 position, float T)
         {
-            var translator = DifferentMethods.React.ActionPool.Take<DifferentMethods.React.Translator>();
+            var translator = DifferentMethods.React.ActionPool.Take<DifferentMethods.React.Components.Translator>();
             translator.tx = transform;
             translator.target = position;
             translator.duration = T;
@@ -39,7 +39,7 @@ namespace DifferentMethods.React
 
         public static void Rotate(Transform transform, Quaternion rotation, float T)
         {
-            var rotator = DifferentMethods.React.ActionPool.Take<DifferentMethods.React.Rotator>();
+            var rotator = DifferentMethods.React.ActionPool.Take<DifferentMethods.React.Components.Rotator>();
             rotator.tx = transform;
             rotator.target = rotation;
             rotator.duration = T;

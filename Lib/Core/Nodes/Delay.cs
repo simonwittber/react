@@ -41,7 +41,7 @@ namespace DifferentMethods.React
                 future = Time.time + duration;
                 Reactor.DelayExecution(this);
             }
-            return NodeState.Continue;
+            return NodeState.NoResult;
         }
 
         public static string GetMenuPath()

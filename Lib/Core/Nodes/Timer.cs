@@ -1,21 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
+using UnityEngine;
 
 namespace DifferentMethods.React
 {
-
-    /// <summary>
-    /// Tries to executes child until a success state is received.
-    /// </summary>
     [System.Serializable]
     [CoreNode]
-    public class UntilSuccess : DecoratorNode
+    public class Timer : DecoratorNode
     {
+        public float maxSeconds = 1;
+
+        float startTime = -1;
 
         protected override NodeState Execute()
         {
             if (Child == null)
                 return NodeState.NoResult;
+            if (startTime < 0)
+                startTime = Time.time;
+            else
+            {
+                if ((Time.time - startTime) >= maxSeconds)
+                {
+                    Child.Abort();
+                    startTime = -1;
+                    return NodeState.Failure;
+                }
+            }
             var result = ExecuteNode(Child);
             if (result == NodeState.Success)
                 return result;
@@ -25,12 +34,12 @@ namespace DifferentMethods.React
 
         public override string ToString()
         {
-            return "Until Success";
+            return "Timer";
         }
 
         public static string GetMenuPath()
         {
-            return "Until/Success";
+            return "Timer";
         }
     }
 

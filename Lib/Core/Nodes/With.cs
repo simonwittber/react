@@ -14,7 +14,7 @@ namespace DifferentMethods.React
         protected override NodeState Execute()
         {
             if (Child == null || target == null)
-                return NodeState.Continue;
+                return NodeState.NoResult;
             SetActiveGameObject(target);
             return ExecuteNode(Child);
         }

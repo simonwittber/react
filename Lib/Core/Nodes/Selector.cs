@@ -21,12 +21,14 @@ namespace DifferentMethods.React
                 {
 
                     case NodeState.Failure:
-                    case NodeState.Continue:
+                    case NodeState.NoResult:
                         break;
                     case NodeState.Success:
+                        Reset();
                         return NodeState.Success;
-                    case NodeState.CallAgain:
-                        return NodeState.CallAgain;
+                    case NodeState.ContinueNextFrame:
+                        Reset();
+                        return NodeState.ContinueNextFrame;
                 }
                 if (NextChild())
                     continue;

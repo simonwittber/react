@@ -18,7 +18,7 @@ namespace DifferentMethods.React
         protected override NodeState Execute()
         {
             if (Child == null || Random.value > probability)
-                return NodeState.Continue;
+                return NodeState.Failure;
             return ExecuteNode(Child);
         }
 

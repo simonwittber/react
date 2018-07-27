@@ -5,7 +5,7 @@ using System;
 using UnityEngine.Profiling;
 using DifferentMethods.Extensions.Collections;
 
-namespace DifferentMethods.React
+namespace DifferentMethods.React.Components
 {
     [ExecuteInEditMode]
     [DisallowMultipleComponent]
@@ -204,6 +204,10 @@ namespace DifferentMethods.React
                         try
                         {
                             node = parentNode.GetChild(index);
+                        }
+                        catch (ArgumentOutOfRangeException)
+                        {
+                            node = Root;
                         }
                         catch (IndexOutOfRangeException)
                         {

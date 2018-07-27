@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using DifferentMethods.Extensions.Serialization;
 using UnityEngine;
+using DifferentMethods.React.Components;
 
 namespace DifferentMethods.React
 {
@@ -42,7 +43,7 @@ namespace DifferentMethods.React
         {
             if (Child != null)
                 return ExecuteNode(Child);
-            return NodeState.Continue;
+            return NodeState.NoResult;
         }
 
     }

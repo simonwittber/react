@@ -5,7 +5,7 @@ using UnityEngine;
 namespace React.Generated {
 
     /// <summary>
-    /// Executes method call [NICENAME] on the active gameObject, then returns a Continue state.
+    /// Executes method call [NICENAME] on the active gameObject, then returns a NoResult state.
     /// </summary>
     [ATTRIBUTES]
     [System.Serializable]
@@ -17,7 +17,7 @@ namespace React.Generated {
 
         protected override NodeState Execute() {
             [CODE];
-            return NodeState.Continue;
+            return NodeState.NoResult;
         }
 
         public override void OnEnable() {

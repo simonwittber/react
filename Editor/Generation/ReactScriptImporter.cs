@@ -10,8 +10,14 @@ namespace DifferentMethods.React.Generation
         [MenuItem("Assets/React/Generate Node Classes")]
         static void Generate()
         {
-            AssetDatabase.Refresh();
             DifferentMethods.React.ReactTypeRegister.CollectTypes();
+            AssetDatabase.StartAssetEditing();
+            foreach (var candidate in ReactCandidateClass.AllCandidates)
+            {
+                ReactGenerator.GetClass(candidate);
+            }
+            AssetDatabase.StopAssetEditing();
+            AssetDatabase.Refresh();
         }
     }
 }

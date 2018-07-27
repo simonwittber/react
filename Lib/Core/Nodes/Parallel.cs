@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-
+using UnityEngine;
 
 namespace DifferentMethods.React
 {
@@ -44,7 +44,7 @@ namespace DifferentMethods.React
             pending.Clear();
         }
 
-        void Reset()
+        new void Reset()
         {
             inProgress = false;
             running.Clear();
@@ -65,63 +65,35 @@ namespace DifferentMethods.React
                 inProgress = true;
                 Init();
             }
-            while (true)
-            {
-                var state = NodeState.Continue;
-                BaseNode child = null;
-                while (running.Count > 0)
-                {
-                    child = running.Dequeue();
-                    var result = ExecuteNode(child);
-                    switch (result)
-                    {
-                        case NodeState.CallAgain:
-                            state = NodeState.CallAgain;
-                            pending.Enqueue(child);
-                            continue;
-                        case NodeState.Continue:
-                            pending.Enqueue(child);
-                            continue;
-                        case NodeState.Failure:
-                            if (policy == ParallelPolicy.FailIfOneFails)
-                            {
-                                state = NodeState.Failure;
-                                break;
-                            }
-                            continue;
-                        case NodeState.Success:
-                            if (policy == ParallelPolicy.SucceedIfOneSucceeds)
-                            {
-                                state = NodeState.Success;
-                                break;
-                            }
-                            continue;
-                    }
-                }
 
+            for (int i = 0, count = running.Count; i < count; i++)
+            {
+                var child = running.Dequeue();
+                var state = ExecuteNode(child);
                 switch (state)
                 {
-                    case NodeState.Success:
+                    case NodeState.ContinueNextFrame:
+                        running.Enqueue(child);
+                        continue;
                     case NodeState.Failure:
-                        AbortChildren(child);
-                        Reset();
-                        return state;
-                    case NodeState.Continue:
-                    case NodeState.CallAgain:
-                        var T = running;
-                        running = pending;
-                        pending = T;
-                        if (state == NodeState.Continue)
+                        if (policy == ParallelPolicy.FailIfOneFails)
                         {
-                            if (running.Count > 0)
-                                continue;
-                            else
-                                Reset();
+                            AbortChildren(exclude: child);
+                            return NodeState.Failure;
                         }
-
-                        return state;
+                        continue;
+                    case NodeState.Success:
+                        if (policy == ParallelPolicy.SucceedIfOneSucceeds)
+                        {
+                            AbortChildren(exclude: child);
+                            return NodeState.Success;
+                        }
+                        continue;
                 }
             }
+            if (running.Count > 0)
+                return NodeState.ContinueNextFrame;
+            return NodeState.Success;
         }
 
     }

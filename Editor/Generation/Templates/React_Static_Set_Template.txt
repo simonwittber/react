@@ -16,7 +16,7 @@ namespace React.Generated {
 
         protected override NodeState Execute() {
             [CODE] = this.value;
-            return NodeState.Continue;
+            return NodeState.NoResult;
         }
 
         public override string ToString ()

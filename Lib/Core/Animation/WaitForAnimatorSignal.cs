@@ -28,7 +28,7 @@ namespace DifferentMethods.React
             {
                 if (signalReceived)
                     return NodeState.Success;
-                return NodeState.Continue;
+                return NodeState.NoResult;
             }
             return NodeState.Failure;
 

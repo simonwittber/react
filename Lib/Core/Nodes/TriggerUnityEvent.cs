@@ -21,7 +21,7 @@ namespace DifferentMethods.React
             {
                 ev.Invoke();
             }
-            return NodeState.Continue;
+            return NodeState.NoResult;
         }
 
         public override string ToString()

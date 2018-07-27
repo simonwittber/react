@@ -13,8 +13,8 @@ namespace DifferentMethods.React
         None,
         Success,
         Failure,
-        Continue,
-        CallAgain,
+        NoResult,
+        ContinueNextFrame,
         Aborted
     }
 

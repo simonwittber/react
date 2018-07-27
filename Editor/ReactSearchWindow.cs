@@ -12,6 +12,7 @@ using System.Xml.Serialization;
 using System;
 using System.Runtime.Serialization.Formatters.Binary;
 using DifferentMethods.React.Generation;
+using DifferentMethods.React.Components;
 
 
 namespace DifferentMethods.React.Editor
@@ -195,6 +196,8 @@ namespace DifferentMethods.React.Editor
         {
             searchResults.Clear();
             var qs = search.ToLower().Trim().Split(' ');
+            // var clock = new System.Diagnostics.Stopwatch();
+            // clock.Start();
             foreach (var registeredType in ReactTypeRegister.AllTypes)
             {
                 if (registeredType.niceName.ToLower() == search)
@@ -214,53 +217,63 @@ namespace DifferentMethods.React.Editor
                 if (add)
                     searchResults.Add(new SearchResult() { niceName = registeredType.niceName, type = registeredType.type, signature = registeredType.signature });
             }
-            foreach (var candidate in ReactCandidateClass.AllCandidates)
-            {
-                if (candidate.NiceName.ToLower() == search)
-                {
-                    searchResults.Insert(0, new SearchResult() { niceName = candidate.NiceName, candidateClass = candidate, signature = candidate.Signature });
-                    continue;
-                }
-                var add = true;
-                foreach (var q in qs)
-                {
-                    if (!candidate.NiceName.ToLower().Contains(q))
-                    {
-                        add = false;
-                    }
-                }
-                add = add && target.IsValidParent(candidate, target.reactor.hotNode);
-                if (add)
-                    searchResults.Add(new SearchResult() { niceName = candidate.NiceName, candidateClass = candidate, signature = candidate.Signature });
-            }
-            return;
+            // return;
             //TODO: This code is far too slow 
-            foreach (var i in AssetDatabase.FindAssets("t:GameObject"))
-            {
-                var go = AssetDatabase.LoadAssetAtPath<GameObject>(AssetDatabase.GUIDToAssetPath(i));
-                var lib = go.GetComponent<Reactor>();
-                if (lib)
-                {
-                    foreach (var super in lib.Exports)
-                    {
-                        if (super.id.ToLower() == search)
-                        {
-                            searchResults.Insert(0, new SearchResult() { niceName = super.id, lib = lib, superID = super.id });
-                            continue;
-                        }
-                        var add = true;
-                        foreach (var q in qs)
-                        {
-                            if (!super.id.ToLower().Contains(q))
-                            {
-                                add = false;
-                            }
-                        }
-                        if (add)
-                            searchResults.Add(new SearchResult() { niceName = super.id, lib = lib, superID = super.id });
-                    }
-                }
-            }
+            // clock.Stop();
+            // Debug.Log("AllTypes: " + clock.ElapsedMilliseconds);
+            // clock.Reset();
+            // clock.Start();
+
+            // foreach (var candidate in ReactCandidateClass.AllCandidates)
+            // {
+            //     if (candidate.NiceName.ToLower() == search)
+            //     {
+            //         searchResults.Insert(0, new SearchResult() { niceName = candidate.NiceName, candidateClass = candidate, signature = candidate.Signature });
+            //         continue;
+            //     }
+            //     var add = true;
+            //     foreach (var q in qs)
+            //     {
+            //         if (!candidate.NiceName.ToLower().Contains(q))
+            //         {
+            //             add = false;
+            //         }
+            //     }
+            //     add = add && target.IsValidParent(candidate, target.reactor.hotNode);
+            //     if (add)
+            //         searchResults.Add(new SearchResult() { niceName = candidate.NiceName, candidateClass = candidate, signature = candidate.Signature });
+            // }
+            // clock.Stop();
+            // Debug.Log("AllCandidate: " + clock.ElapsedMilliseconds);
+            // clock.Reset();
+            // clock.Start();
+            return;
+            // foreach (var i in AssetDatabase.FindAssets("t:GameObject"))
+            // {
+            //     var go = AssetDatabase.LoadAssetAtPath<GameObject>(AssetDatabase.GUIDToAssetPath(i));
+            //     var lib = go.GetComponent<Reactor>();
+            //     if (lib)
+            //     {
+            //         foreach (var super in lib.Exports)
+            //         {
+            //             if (super.id.ToLower() == search)
+            //             {
+            //                 searchResults.Insert(0, new SearchResult() { niceName = super.id, lib = lib, superID = super.id });
+            //                 continue;
+            //             }
+            //             var add = true;
+            //             foreach (var q in qs)
+            //             {
+            //                 if (!super.id.ToLower().Contains(q))
+            //                 {
+            //                     add = false;
+            //                 }
+            //             }
+            //             if (add)
+            //                 searchResults.Add(new SearchResult() { niceName = super.id, lib = lib, superID = super.id });
+            //         }
+            //     }
+            // }
         }
 
         public void SaveState()

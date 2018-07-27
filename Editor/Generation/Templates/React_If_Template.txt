@@ -19,7 +19,7 @@ namespace React.Generated {
         {
             if([CODE]) 
                 return ExecuteNode(Child);
-            return NodeState.Continue;
+            return NodeState.NoResult;
         }
 
         public override void OnEnable() {

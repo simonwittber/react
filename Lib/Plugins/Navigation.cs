@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.AI;
 
-namespace DifferentMethods.React
+namespace DifferentMethods.React.Components
 {
     [RequireComponent(typeof(NavMeshAgent))]
     public class Navigation : MonoBehaviour
@@ -19,26 +19,40 @@ namespace DifferentMethods.React
 
         public void Wander(float maxDistance)
         {
-            agent.SetDestination(Vector3.Scale(Random.onUnitSphere, new Vector3(1, 0, 1).normalized * maxDistance));
+            if (agent != null)
+            {
+                var direction = Vector3.Slerp(-transform.right, transform.right, Random.value);
+                var destination = transform.position + (direction * maxDistance);
+                agent.SetDestination(destination);
+                Debug.DrawLine(transform.position, destination, Color.magenta, 1);
+            }
+        }
+
+        public bool NearDestination(float threshold)
+        {
+            if (agent == null) return false;
+            return (transform.position - agent.destination).sqrMagnitude < (threshold * threshold);
         }
 
         public void MoveTowardsActiveTarget(float speed)
         {
-            if (target != null && target.activeTarget != null)
-            {
-                agent.speed = speed;
-                agent.SetDestination(target.activeTarget.transform.position);
-            }
+            if (agent != null)
+                if (target != null && target.activeTarget != null)
+                {
+                    agent.speed = speed;
+                    agent.SetDestination(target.activeTarget.transform.position);
+                }
         }
 
         public void MoveAwayFromActiveTarget(float speed)
         {
-            if (target != null && target.activeTarget != null)
-            {
-                var delta = target.activeTarget.transform.position - transform.position;
-                agent.speed = speed;
-                agent.SetDestination(transform.position - delta);
-            }
+            if (agent != null)
+                if (target != null && target.activeTarget != null)
+                {
+                    var delta = target.activeTarget.transform.position - transform.position;
+                    agent.speed = speed;
+                    agent.SetDestination(transform.position - delta);
+                }
         }
 
     }

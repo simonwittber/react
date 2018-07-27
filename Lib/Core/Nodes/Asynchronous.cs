@@ -19,7 +19,7 @@ namespace DifferentMethods.React
             {
                 Reactor.QueueForExecution(this.Child);
             }
-            return NodeState.Continue;
+            return NodeState.NoResult;
         }
 
         public override string ToString()

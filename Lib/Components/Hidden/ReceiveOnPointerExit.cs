@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace DifferentMethods.React
+namespace DifferentMethods.React.Components
 {
     [RequireComponent(typeof(Reactor))]
     public class ReceiveOnPointerExit : MonoBehaviour, IPointerExitHandler

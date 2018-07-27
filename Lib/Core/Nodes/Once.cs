@@ -19,11 +19,11 @@ namespace DifferentMethods.React
             if (!done && Child != null)
             {
                 var result = ExecuteNode(Child);
-                if (result != NodeState.CallAgain)
+                if (result != NodeState.ContinueNextFrame)
                     done = true;
                 return result;
             }
-            return NodeState.Continue;
+            return NodeState.NoResult;
         }
     }
 

@@ -29,7 +29,7 @@ namespace DifferentMethods.React
             {
                 var node = actions.Dequeue();
                 var result = BaseNode.ExecuteNode(node);
-                if (result == NodeState.CallAgain)
+                if (result == NodeState.ContinueNextFrame)
                     pendingActions.Enqueue(node);
                 else
                     node.inTaskQueue = false;

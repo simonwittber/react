@@ -25,7 +25,7 @@ namespace DifferentMethods.React
                 }
                 return result;
             }
-            return NodeState.Continue;
+            return NodeState.NoResult;
         }
 
         public static string GetMenuPath()

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace DifferentMethods.React
+namespace DifferentMethods.React.Components
 {
     public class Inventory : MonoBehaviour
     {

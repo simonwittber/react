@@ -25,7 +25,7 @@ namespace DifferentMethods.React
         protected override NodeState Execute()
         {
             if (prefab == null)
-                return NodeState.Continue;
+                return NodeState.NoResult;
             target = GameObjectPool.Take(prefab, lifetime: lifetime);
             if (matchPosition)
                 target.transform.position = Context.gameObject.transform.position;

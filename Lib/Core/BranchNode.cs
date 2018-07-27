@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Text;
 using System.Linq;
+using DifferentMethods.React.Components;
 
 namespace DifferentMethods.React
 {
@@ -47,6 +48,11 @@ namespace DifferentMethods.React
             this.Children.Clear();
             this.Children.AddRange(children);
             return this;
+        }
+
+        public void Reset()
+        {
+            activeChild = 0;
         }
 
         public override void Abort()

@@ -10,7 +10,7 @@ namespace DifferentMethods.React
     /// </summary>
     [System.Serializable]
     [CoreNode]
-    public class Toggle : DecoratorNode
+    public class FlipFlop : DecoratorNode
     {
         public bool state = false;
 
@@ -24,7 +24,7 @@ namespace DifferentMethods.React
                     return ExecuteNode(Child);
                 }
             }
-            return NodeState.Continue;
+            return NodeState.NoResult;
         }
     }
 

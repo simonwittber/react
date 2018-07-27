@@ -20,7 +20,7 @@ namespace DifferentMethods.React
                 Context.Update(Reactor.gameObject);
                 Reactor.QueueForExecution(Child);
             }
-            return NodeState.Continue;
+            return NodeState.NoResult;
         }
     }
 

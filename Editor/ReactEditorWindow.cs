@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using DifferentMethods.React.Components;
 
 namespace DifferentMethods.React.Editor
 {
@@ -23,7 +24,7 @@ namespace DifferentMethods.React.Editor
 
         void Update()
         {
-            if (Application.isPlaying)
+            if (Application.isPlaying || focusedWindow == this)
                 Repaint();
         }
 

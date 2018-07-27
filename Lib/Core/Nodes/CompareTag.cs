@@ -22,7 +22,7 @@ namespace DifferentMethods.React
                     return ExecuteNode(Child);
                 }
             }
-            return NodeState.Continue;
+            return NodeState.NoResult;
         }
 
         public override string ToString()

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using DifferentMethods.React.Components;
 
 namespace DifferentMethods.React.Editor
 {

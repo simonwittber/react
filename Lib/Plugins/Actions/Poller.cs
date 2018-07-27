@@ -1,7 +1,7 @@
 using UnityEngine;
 
 
-namespace DifferentMethods.React
+namespace DifferentMethods.React.Components
 {
     public class Poller : ReactAction
     {

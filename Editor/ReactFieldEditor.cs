@@ -20,6 +20,8 @@ namespace DifferentMethods.React.Editor
 
             foreach (var f in fields)
             {
+                if (f.IsStatic)
+                    continue;
                 if (f.Name == "enabled")
                     continue;
                 if (f.Name == "Reactor")

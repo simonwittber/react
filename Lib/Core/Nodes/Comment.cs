@@ -17,7 +17,7 @@ namespace DifferentMethods.React
 
         protected override NodeState Execute()
         {
-            return NodeState.Continue;
+            return NodeState.NoResult;
         }
     }
 }

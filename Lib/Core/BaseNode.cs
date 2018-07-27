@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Text;
 using System;
+using DifferentMethods.React.Components;
 
 namespace DifferentMethods.React.Generated
 {
 
 
 }
-
 
 namespace DifferentMethods.React
 {
@@ -100,7 +100,7 @@ namespace DifferentMethods.React
 
         protected virtual NodeState Execute()
         {
-            return NodeState.Continue;
+            return NodeState.NoResult;
         }
 
         public override string ToString()
@@ -118,7 +118,7 @@ namespace DifferentMethods.React
             if (node == null)
             {
                 if (Application.isEditor) Debug.LogError("Node should not be null.");
-                return NodeState.Continue;
+                return NodeState.NoResult;
             }
             var result = node.Execute();
             node.lastState = result;

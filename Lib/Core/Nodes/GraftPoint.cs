@@ -12,7 +12,7 @@ namespace DifferentMethods.React
         {
             if (Child != null)
                 return ExecuteNode(Child);
-            return NodeState.Continue;
+            return NodeState.NoResult;
         }
 
         public override string ToString()

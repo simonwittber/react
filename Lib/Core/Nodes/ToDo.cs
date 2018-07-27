@@ -20,12 +20,12 @@ namespace DifferentMethods.React
         protected override NodeState Execute()
         {
             var result = ExecuteNode(ActiveChild);
-            if (result == NodeState.CallAgain)
+            if (result == NodeState.ContinueNextFrame)
             {
                 return result;
             }
             NextChild();
-            return NodeState.Continue;
+            return NodeState.NoResult;
         }
 
     }

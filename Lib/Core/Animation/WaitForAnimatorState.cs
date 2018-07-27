@@ -35,7 +35,7 @@ namespace DifferentMethods.React
             var s = animator.GetCurrentAnimatorStateInfo(layer);
             if (s.shortNameHash == state || s.fullPathHash == state)
                 return NodeState.Success;
-            return NodeState.Continue;
+            return NodeState.NoResult;
         }
 
     }

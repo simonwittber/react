@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using DifferentMethods.React.Components;
 
 namespace DifferentMethods.React
 {
@@ -17,9 +18,9 @@ namespace DifferentMethods.React
         {
 
             if (target == null)
-                return NodeState.Continue;
+                return NodeState.NoResult;
             target.ReceiveMessage(message, Reactor.gameObject);
-            return NodeState.Continue;
+            return NodeState.NoResult;
         }
 
     }

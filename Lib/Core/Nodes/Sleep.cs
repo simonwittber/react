@@ -27,9 +27,9 @@ namespace DifferentMethods.React
             timer -= Time.deltaTime;
             if (timer > 0)
             {
-                return NodeState.CallAgain;
+                return NodeState.ContinueNextFrame;
             }
-            return NodeState.Continue;
+            return NodeState.NoResult;
         }
 
     }

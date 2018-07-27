@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using DifferentMethods.React.Components;
 
 namespace DifferentMethods.React
 {
@@ -51,7 +52,7 @@ namespace DifferentMethods.React
                     var child = Children[i];
                     ExecuteNode(child);
                 }
-                return NodeState.Continue;
+                return NodeState.NoResult;
             }
             catch (System.Exception)
             {

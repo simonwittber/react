@@ -56,7 +56,7 @@ namespace DifferentMethods.React.Components
         {
             if (!string.IsNullOrEmpty(node.id))
             {
-                Log("Registering Export", node.id);
+                // Log("Registering Export", node.id);
                 exports[node.id] = node;
             }
         }

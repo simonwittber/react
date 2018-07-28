@@ -13,33 +13,15 @@ namespace React.Generated {
     public class [CLASSNAME] : LeafNode
     {
 [PROPERTY_TYPE]
-
         protected override NodeState Execute() {
             [CODE] = this.value;
             return NodeState.NoResult;
         }
 
-        public override string ToString ()
-        {
-            return NiceName();
-        }
-
-        public static string NiceName() {
-            return "SET [NICENAME]";
-        }
-
-        public static string GetMenuPath() {
-            return "[MENUPATH]";
-        }
-
-        public static string Signature() {
-            return "";
-        }
-
-        public override System.Type GetWrappedType()
-        {
-            return typeof([COMPONENTTYPE]);
-        }
-
+        public override string ToString() => NiceName();
+        public static string NiceName() => "SET [NICENAME]";
+        public static string GetMenuPath() => "[MENUPATH]";
+        public static string Signature() => "[SIGNATURE]";
+        public override System.Type GetWrappedType() => typeof([COMPONENTTYPE]);
     }
 }

@@ -1,0 +1,10 @@
+{
+    "name": "React.Generated",
+    "references": [
+        "DifferentMethods.React.Lib"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}

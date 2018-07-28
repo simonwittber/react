@@ -11,9 +11,7 @@ namespace React.Generated {
     public class [CLASSNAME] : LeafNode
     {
 [FIELDS]
-
         [COMPONENT_DEC]
-
         protected override NodeState Execute() {
             if([CODE])
                 return NodeState.Success;
@@ -25,27 +23,10 @@ namespace React.Generated {
             [ONENABLE_CODE]
         }
 
-        public override string ToString ()
-        {
-            return NiceName();
-        }
-
-        public static string NiceName() {
-            return "CHECK [NICENAME]";
-        }
-
-        public static string GetMenuPath() {
-            return "[MENUPATH]";
-        }
-
-        public static string Signature() {
-            return "[SIGNATURE]";
-        }
-
-        public override System.Type GetWrappedType()
-        {
-            return typeof([COMPONENTTYPE]);
-        }
-        
+        public override string ToString() => NiceName();
+        public static string NiceName() => "CHECK [NICENAME]";
+        public static string GetMenuPath() => "[MENUPATH]";
+        public static string Signature() => "[SIGNATURE]";
+        public override System.Type GetWrappedType() => typeof([COMPONENTTYPE]);
     }
 }

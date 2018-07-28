@@ -54,7 +54,7 @@ MonoBehaviour:
   libraries: []
   goLarge: 1
   showExplorer: 0
-  hotNodePath: 0000000000000000000000000000000001000000
+  hotNodePath: 00000000
   serializer:
     references:
     - {fileID: 114374469079189800}

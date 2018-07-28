@@ -13,7 +13,7 @@ namespace React.Generated {
     {
 [FIELDS]
 
-        [COMPONENT_DEC]
+        [COMPONENTTYPE] Component;
 
         protected override NodeState Execute() {
             [CODE];
@@ -22,30 +22,15 @@ namespace React.Generated {
 
         public override void OnEnable() {
             base.OnEnable();
+            Component = Reactor.GetComponent<[COMPONENTTYPE]>();
             [ONENABLE_CODE]
         }
 
-        public override string ToString ()
-        {
-            return NiceName();
-        }
-
-        public static string NiceName() {
-            return "[NICENAME]";
-        }
-
-        public static string GetMenuPath() {
-            return "[MENUPATH]";
-        }
-
-        public static string Signature() {
-            return "[SIGNATURE]";
-        }
-
-        public override System.Type GetWrappedType()
-        {
-            return typeof([COMPONENTTYPE]);
-        }
+        public override string ToString() => NiceName();
+        public static string NiceName() => "[NICENAME]";
+        public static string GetMenuPath() => "[MENUPATH]";
+        public static string Signature() => "[SIGNATURE]";
+        public override System.Type GetWrappedType() => typeof([COMPONENTTYPE]);
 
         public static int leafNodeId = ReactTypeRegister.RegisterNodeClass(typeof([COMPONENTTYPE]), typeof([CLASSNAME]));
 

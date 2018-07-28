@@ -12,7 +12,7 @@ namespace React.Generated {
     {
 [FIELDS]
 
-        [COMPONENT_DEC]
+        [COMPONENTTYPE] Component;
 
         protected override NodeState Execute() {
             if([CODE]) 
@@ -23,29 +23,13 @@ namespace React.Generated {
         public override void OnEnable() {
             base.OnEnable();
             [ONENABLE_CODE]
+            Component = Reactor.GetComponent<[COMPONENTTYPE]>();
         }
 
-        public override string ToString ()
-        {
-            return NiceName();
-        }
-
-        public static string NiceName() {
-            return "CHECK [NICENAME]";
-        }
-
-        public static string GetMenuPath() {
-            return "[MENUPATH]";
-        }
-
-        public static string Signature() {
-            return "[SIGNATURE]";
-        }
-
-        public override System.Type GetWrappedType()
-        {
-            return typeof([COMPONENTTYPE]);
-        }
-
+        public override string ToString() => NiceName();
+        public static string NiceName() => "CHECK [NICENAME]";
+        public static string GetMenuPath() => "[MENUPATH]";
+        public static string Signature() => "[SIGNATURE]";
+        public override System.Type GetWrappedType() => typeof([COMPONENTTYPE]);
     }
 }

@@ -127,13 +127,12 @@ namespace DifferentMethods.React.Generation
                 foreach (var cc in clist) yield return cc;
         }
 
-        static List<ReactCandidateClass> CollectCandidates()
+        static List<ReactCandidateClass> CollectAllCandidates()
         {
             ifTemplate = ReactEditorUtility.LoadTemplate("React_If_Template");
             conditionTemplate = ReactEditorUtility.LoadTemplate("React_Condition_Template");
             functionTemplate = ReactEditorUtility.LoadTemplate("React_Function_Template");
             setTemplate = ReactEditorUtility.LoadTemplate("React_Set_Template");
-
             staticIfTemplate = ReactEditorUtility.LoadTemplate("React_Static_If_Template");
             staticConditionTemplate = ReactEditorUtility.LoadTemplate("React_Static_Condition_Template");
             staticFunctionTemplate = ReactEditorUtility.LoadTemplate("React_Static_Function_Template");
@@ -167,6 +166,43 @@ namespace DifferentMethods.React.Generation
                     CreateClassesForType(ct);
                 }
 
+            }
+            return candidates;
+        }
+
+        static List<ReactCandidateClass> CollectCandidates()
+        {
+            ifTemplate = ReactEditorUtility.LoadTemplate("React_If_Template");
+            conditionTemplate = ReactEditorUtility.LoadTemplate("React_Condition_Template");
+            functionTemplate = ReactEditorUtility.LoadTemplate("React_Function_Template");
+            setTemplate = ReactEditorUtility.LoadTemplate("React_Set_Template");
+            staticIfTemplate = ReactEditorUtility.LoadTemplate("React_Static_If_Template");
+            staticConditionTemplate = ReactEditorUtility.LoadTemplate("React_Static_Condition_Template");
+            staticFunctionTemplate = ReactEditorUtility.LoadTemplate("React_Static_Function_Template");
+            staticSetTemplate = ReactEditorUtility.LoadTemplate("React_Static_Set_Template");
+
+            CreateClassesForType(typeof(RemoteSettings));
+            CreateClassesForType(typeof(Cursor));
+            CreateClassesForType(typeof(Debug));
+            CreateClassesForType(typeof(Handheld));
+            CreateClassesForType(typeof(Input));
+            CreateClassesForType(typeof(ParticleSystem));
+            CreateClassesForType(typeof(Application));
+            CreateClassesForType(typeof(Physics));
+            CreateClassesForType(typeof(PlayerPrefs));
+
+            foreach (var i in AssetDatabase.FindAssets("t:ReactComponentDatabase"))
+            {
+                var db = AssetDatabase.LoadAssetAtPath<ReactComponentDatabase>(AssetDatabase.GUIDToAssetPath(i));
+                foreach (var ms in db.scripts)
+                {
+                    var ct = ms.GetClass();
+                    if (!ct.IsSubclassOf(typeof(Component))) continue;
+                    if (ct.GetCustomAttributes(typeof(ObsoleteAttribute), true).Length > 0) continue;
+                    if (ct.IsValueType) continue;
+                    if (!ct.IsPublic) continue;
+                    CreateClassesForType(ct);
+                }
             }
             return candidates;
         }

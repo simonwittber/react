@@ -11,7 +11,6 @@ using DifferentMethods.React.Editor;
 
 namespace DifferentMethods.React.Generation
 {
-
     public static class ReactGenerator
     {
 
@@ -35,7 +34,7 @@ namespace DifferentMethods.React.Generation
             if (isStatic)
                 code = string.Format("{0}.{1}", componentType.Name, propertyName);
             else
-                code = string.Format("Context.gameObject.GetComponent<{0}>().{1}", componentType.FullName, propertyName);
+                code = string.Format("Component.{1}", componentType.FullName, propertyName);
             usings.Add(componentType.Namespace);
             usings.Add(propertyType.Namespace);
             var subPath = System.IO.Path.Combine(outputPath, componentType.Namespace ?? "");
@@ -122,7 +121,7 @@ namespace DifferentMethods.React.Generation
             }
             else
             {
-                componentName = string.Format("Context.gameObject.GetComponent<{0}>()", componentType);
+                componentName = "Component";
             }
 
             if (parameters == null) //This is a property or field.

@@ -1,0 +1,38 @@
+using DifferentMethods.React;
+using UnityEngine;
+
+
+namespace React.Generated {
+
+    /// <summary>
+    /// Executes child if result of TrailRenderer.generateLightingData on the active gameObject is true.
+    /// </summary>
+    
+    [System.Serializable]
+    public class If_TrailRenderer_generateLightingData_ : DecoratorNode
+    {
+
+
+        protected UnityEngine.TrailRenderer Component { get; set; }
+
+        protected override NodeState Execute() 
+        {
+            if(Component.generateLightingData) 
+                return ExecuteNode(Child);
+            return NodeState.NoResult;
+        }
+
+        public override void OnEnable() {
+            base.OnEnable();
+            Component = gameObject.GetComponent<UnityEngine.TrailRenderer>();
+            
+        }
+
+        public override string ToString() => NiceName();
+        public static string NiceName() => "IF TrailRenderer.generateLightingData";
+        public static string GetMenuPath() => "TrailRenderer/If/generateLightingData";
+        public static string Signature() => " ()";
+        public override System.Type GetWrappedType() => typeof(UnityEngine.TrailRenderer);
+
+    }
+}

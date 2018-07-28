@@ -21,19 +21,9 @@ namespace DifferentMethods.React
         public NodeState lastState { get; set; }
         public float lastExecuteTime { get; set; }
         [NonSerialized] public Reactor Reactor;
+        [NonSerialized] protected GameObject gameObject;
         [NonSerialized] internal bool inTaskQueue = false;
 
-        [NonSerialized] ReactContext _context;
-        public ReactContext Context
-        {
-            get
-            {
-                if (_context != null) return _context;
-                if (nodeParent != null) return nodeParent.Context;
-                return null;
-            }
-            set { _context = value; }
-        }
 
         public virtual int ChildCount { get { return 0; } }
 
@@ -46,8 +36,10 @@ namespace DifferentMethods.React
                 this.Reactor = reactor;
         }
 
-        public virtual void OnReadyToConfigure()
+        public virtual void Configure(Reactor reactor, GameObject context)
         {
+            this.Reactor = reactor;
+            this.gameObject = context;
         }
 
         public static BaseNode Clone(BaseNode node)

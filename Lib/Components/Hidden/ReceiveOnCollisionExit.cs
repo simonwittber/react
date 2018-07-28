@@ -18,7 +18,6 @@ namespace DifferentMethods.React.Components
 
         void OnCollisionExit(Collision collision)
         {
-            node.Context.Update(gameObject, collision);
             BaseNode.ExecuteNode(node);
         }
     }

@@ -13,7 +13,7 @@ namespace React.Generated {
     {
 
 
-        DifferentMethods.React.Components.Navigation Component;
+        protected DifferentMethods.React.Components.Navigation Component { get; set; }
 
         protected override NodeState Execute() {
             if(Component.enabled) 
@@ -24,7 +24,7 @@ namespace React.Generated {
         public override void OnEnable() {
             base.OnEnable();
             
-            Component = Reactor.GetComponent<DifferentMethods.React.Components.Navigation>();
+            Component = gameObject.GetComponent<DifferentMethods.React.Components.Navigation>();
         }
 
         public override string ToString() => NiceName();

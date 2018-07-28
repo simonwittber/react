@@ -12,7 +12,7 @@ namespace React.Generated {
     {
 
 
-        UnityEngine.ParticleSystem Component;
+        protected UnityEngine.ParticleSystem Component { get; set; }
 
         protected override NodeState Execute() {
             if(Component.isPlaying) 
@@ -23,7 +23,7 @@ namespace React.Generated {
         public override void OnEnable() {
             base.OnEnable();
             
-            Component = Reactor.GetComponent<UnityEngine.ParticleSystem>();
+            Component = gameObject.GetComponent<UnityEngine.ParticleSystem>();
         }
 
         public override string ToString() => NiceName();

@@ -16,7 +16,7 @@ namespace React.Generated {
         public float distance;
 
 
-        DifferentMethods.React.Components.Target Component;
+        protected DifferentMethods.React.Components.Target Component { get; set; }
 
         protected override NodeState Execute() 
         {
@@ -27,7 +27,7 @@ namespace React.Generated {
 
         public override void OnEnable() {
             base.OnEnable();
-            Component = Reactor.GetComponent<DifferentMethods.React.Components.Target>();
+            Component = gameObject.GetComponent<DifferentMethods.React.Components.Target>();
             
         }
 

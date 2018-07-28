@@ -15,7 +15,7 @@ namespace React.Generated {
     {
         public bool value;
 
-        ParticleSystem Component;
+        protected ParticleSystem Component { get; set; }
 
         protected override NodeState Execute() {
             Component.useAutoRandomSeed = this.value;
@@ -24,7 +24,7 @@ namespace React.Generated {
         
         public override void OnEnable() {
             base.OnEnable();
-            Component = Reactor.GetComponent<ParticleSystem>();
+            Component = gameObject.GetComponent<ParticleSystem>();
         }
 
         public override string ToString () => NiceName();

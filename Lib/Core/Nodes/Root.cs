@@ -37,8 +37,6 @@ namespace DifferentMethods.React
         public override void OnAfterDeserialize(BaseNode parent, Reactor reactor)
         {
             base.OnAfterDeserialize(parent, reactor);
-            foreach (var c in Children)
-                c.Context = ReactContext.New(this);
         }
 
         protected override NodeState Execute()

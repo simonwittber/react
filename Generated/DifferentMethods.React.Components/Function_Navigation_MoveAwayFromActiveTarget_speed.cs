@@ -16,7 +16,7 @@ namespace React.Generated {
         public float speed;
 
 
-        DifferentMethods.React.Components.Navigation Component;
+        protected DifferentMethods.React.Components.Navigation Component { get; set; }
 
         protected override NodeState Execute() {
             Component.MoveAwayFromActiveTarget(speed);
@@ -25,7 +25,7 @@ namespace React.Generated {
 
         public override void OnEnable() {
             base.OnEnable();
-            Component = Reactor.GetComponent<DifferentMethods.React.Components.Navigation>();
+            Component = gameObject.GetComponent<DifferentMethods.React.Components.Navigation>();
             
         }
 

@@ -17,7 +17,7 @@ namespace React.Generated {
         public float value;
 
 
-        DifferentMethods.React.Components.Blackboard Component;
+        protected DifferentMethods.React.Components.Blackboard Component { get; set; }
 
         protected override NodeState Execute() 
         {
@@ -28,7 +28,7 @@ namespace React.Generated {
 
         public override void OnEnable() {
             base.OnEnable();
-            Component = Reactor.GetComponent<DifferentMethods.React.Components.Blackboard>();
+            Component = gameObject.GetComponent<DifferentMethods.React.Components.Blackboard>();
             
         }
 

@@ -16,8 +16,6 @@ namespace DifferentMethods.React
         {
             if (Child != null)
             {
-                Context = ReactContext.New(this);
-                Context.Update(Reactor.gameObject);
                 Reactor.QueueForExecution(Child);
             }
             return NodeState.NoResult;

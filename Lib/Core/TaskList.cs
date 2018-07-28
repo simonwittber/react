@@ -14,10 +14,6 @@ namespace DifferentMethods.React
             //If a node is already running, we don't try and start it again.
             if (!node.inTaskQueue)
             {
-                //These two lines preservce the Context of the node, so that parent nodes can 
-                //continue independently without changing the context of this running child.
-                var currentContext = node.Context;
-                node.Context = currentContext;
                 actions.Enqueue(node);
                 node.inTaskQueue = true;
             }

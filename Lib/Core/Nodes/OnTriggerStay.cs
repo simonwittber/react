@@ -12,17 +12,10 @@ namespace DifferentMethods.React
     [CoreDecorator(3)]
     public class OnTriggerStay : DecoratorNode
     {
-        public LayerMask layers = -1;
-
-        void Reset()
-        {
-            layers = LayerMask.NameToLayer("Everything");
-        }
-
         protected override NodeState Execute()
         {
 
-            if (Child != null && (0 != (layers.value & 1 << Context.other.gameObject.layer)))
+            if (Child != null)
             {
                 Reactor.QueueForExecution(Child);
             }

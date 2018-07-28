@@ -15,7 +15,7 @@ namespace React.Generated {
         public string id;
 
 
-        DifferentMethods.React.Components.Blackboard Component;
+        protected DifferentMethods.React.Components.Blackboard Component { get; set; }
 
         protected override NodeState Execute() {
             if(Component.IsFalse(id)) 
@@ -26,7 +26,7 @@ namespace React.Generated {
         public override void OnEnable() {
             base.OnEnable();
             
-            Component = Reactor.GetComponent<DifferentMethods.React.Components.Blackboard>();
+            Component = gameObject.GetComponent<DifferentMethods.React.Components.Blackboard>();
         }
 
         public override string ToString() => NiceName();

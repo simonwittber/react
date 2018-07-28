@@ -13,7 +13,7 @@ namespace React.Generated {
     {
 
 
-        UnityEngine.ParticleSystem Component;
+        protected UnityEngine.ParticleSystem Component { get; set; }
 
         protected override NodeState Execute() 
         {
@@ -24,7 +24,7 @@ namespace React.Generated {
 
         public override void OnEnable() {
             base.OnEnable();
-            Component = Reactor.GetComponent<UnityEngine.ParticleSystem>();
+            Component = gameObject.GetComponent<UnityEngine.ParticleSystem>();
             
         }
 

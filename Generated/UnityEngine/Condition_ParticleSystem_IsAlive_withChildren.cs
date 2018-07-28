@@ -14,7 +14,7 @@ namespace React.Generated {
         public bool withChildren;
 
 
-        UnityEngine.ParticleSystem Component;
+        protected UnityEngine.ParticleSystem Component { get; set; }
 
         protected override NodeState Execute() {
             if(Component.IsAlive(withChildren)) 
@@ -25,7 +25,7 @@ namespace React.Generated {
         public override void OnEnable() {
             base.OnEnable();
             
-            Component = Reactor.GetComponent<UnityEngine.ParticleSystem>();
+            Component = gameObject.GetComponent<UnityEngine.ParticleSystem>();
         }
 
         public override string ToString() => NiceName();

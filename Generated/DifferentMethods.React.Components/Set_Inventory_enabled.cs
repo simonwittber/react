@@ -16,7 +16,7 @@ namespace React.Generated {
     {
         public bool value;
 
-        Inventory Component;
+        protected Inventory Component { get; set; }
 
         protected override NodeState Execute() {
             Component.enabled = this.value;
@@ -25,7 +25,7 @@ namespace React.Generated {
         
         public override void OnEnable() {
             base.OnEnable();
-            Component = Reactor.GetComponent<Inventory>();
+            Component = gameObject.GetComponent<Inventory>();
         }
 
         public override string ToString () => NiceName();

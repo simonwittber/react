@@ -15,7 +15,7 @@ namespace React.Generated {
         public string item;
 
 
-        DifferentMethods.React.Components.Inventory Component;
+        protected DifferentMethods.React.Components.Inventory Component { get; set; }
 
         protected override NodeState Execute() {
             if(Component.HasItem(item)) 
@@ -26,7 +26,7 @@ namespace React.Generated {
         public override void OnEnable() {
             base.OnEnable();
             
-            Component = Reactor.GetComponent<DifferentMethods.React.Components.Inventory>();
+            Component = gameObject.GetComponent<DifferentMethods.React.Components.Inventory>();
         }
 
         public override string ToString() => NiceName();

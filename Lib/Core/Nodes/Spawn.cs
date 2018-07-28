@@ -28,9 +28,9 @@ namespace DifferentMethods.React
                 return NodeState.NoResult;
             target = GameObjectPool.Take(prefab, lifetime: lifetime);
             if (matchPosition)
-                target.transform.position = Context.gameObject.transform.position;
+                target.transform.position = Reactor.gameObject.transform.position;
             if (matchRotation)
-                target.transform.rotation = Context.gameObject.transform.rotation;
+                target.transform.rotation = Reactor.gameObject.transform.rotation;
             return NodeState.Success;
         }
 

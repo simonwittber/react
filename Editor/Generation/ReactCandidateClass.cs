@@ -191,6 +191,28 @@ namespace DifferentMethods.React.Generation
             CreateClassesForType(typeof(Physics));
             CreateClassesForType(typeof(PlayerPrefs));
 
+            var commonTypes = new[] {
+                typeof(Transform),
+                typeof(Light),
+                typeof(Renderer),
+                typeof(Collider),
+                typeof(Collider2D),
+                typeof(Physics),
+                typeof(Physics2D),
+                typeof(Rigidbody),
+                typeof(Rigidbody2D),
+                typeof(Animator),
+                typeof(AudioSource),
+                typeof(Camera),
+                typeof(Animation),
+                typeof(ParticleSystem),
+                typeof(TrailRenderer)
+            };
+            foreach (var i in commonTypes)
+            {
+                CreateClassesForType(i);
+            }
+
             foreach (var i in AssetDatabase.FindAssets("t:ReactComponentDatabase"))
             {
                 var db = AssetDatabase.LoadAssetAtPath<ReactComponentDatabase>(AssetDatabase.GUIDToAssetPath(i));

@@ -13,7 +13,7 @@ namespace React.Generated {
     {
 [FIELDS]
 
-        [COMPONENTTYPE] Component;
+        protected [COMPONENTTYPE] Component { get; set; }
 
         protected override NodeState Execute() {
             [CODE];
@@ -22,7 +22,7 @@ namespace React.Generated {
 
         public override void OnEnable() {
             base.OnEnable();
-            Component = Reactor.GetComponent<[COMPONENTTYPE]>();
+            Component = gameObject.GetComponent<[COMPONENTTYPE]>();
             [ONENABLE_CODE]
         }
 

@@ -22,7 +22,6 @@ namespace DifferentMethods.React
 
         public void Receive(GameObject sender)
         {
-            Context.Update(Reactor.gameObject, sender);
             BaseNode.ExecuteNode(this);
         }
 

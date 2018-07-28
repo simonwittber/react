@@ -25,10 +25,10 @@ namespace DifferentMethods.React
             if (Child != null) Child.OnAfterDeserialize(this, reactor);
         }
 
-        public override void OnReadyToConfigure()
+        public override void Configure(Reactor reactor, GameObject context)
         {
-            base.OnReadyToConfigure();
-            if (Child != null) Child.OnReadyToConfigure();
+            base.Configure(reactor, context);
+            if (Child != null) Child.Configure(reactor, context);
         }
 
         public override void Abort()

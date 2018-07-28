@@ -36,11 +36,11 @@ namespace DifferentMethods.React
             Children.AddRange(children);
         }
 
-        public override void OnReadyToConfigure()
+        public override void Configure(Reactor reactor, GameObject context)
         {
-            base.OnReadyToConfigure();
+            base.Configure(reactor, context);
             foreach (var c in Children)
-                c.OnReadyToConfigure();
+                c.Configure(reactor, context);
         }
 
         public BranchNode SetChildren(params BaseNode[] children)

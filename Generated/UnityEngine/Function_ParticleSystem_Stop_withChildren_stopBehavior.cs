@@ -16,7 +16,7 @@ namespace React.Generated {
         public UnityEngine.ParticleSystemStopBehavior stopBehavior;
 
 
-        UnityEngine.ParticleSystem Component;
+        protected UnityEngine.ParticleSystem Component { get; set; }
 
         protected override NodeState Execute() {
             Component.Stop(withChildren, stopBehavior);
@@ -25,7 +25,7 @@ namespace React.Generated {
 
         public override void OnEnable() {
             base.OnEnable();
-            Component = Reactor.GetComponent<UnityEngine.ParticleSystem>();
+            Component = gameObject.GetComponent<UnityEngine.ParticleSystem>();
             
         }
 

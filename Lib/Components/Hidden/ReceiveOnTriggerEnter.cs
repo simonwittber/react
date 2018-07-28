@@ -18,7 +18,6 @@ namespace DifferentMethods.React.Components
 
         void OnTriggerEnter(Collider other)
         {
-            node.Context.Update(gameObject, other);
             BaseNode.ExecuteNode(node);
         }
     }

@@ -16,7 +16,7 @@ namespace React.Generated {
     {
         public bool value;
 
-        Navigation Component;
+        protected Navigation Component { get; set; }
 
         protected override NodeState Execute() {
             Component.enabled = this.value;
@@ -25,7 +25,7 @@ namespace React.Generated {
         
         public override void OnEnable() {
             base.OnEnable();
-            Component = Reactor.GetComponent<Navigation>();
+            Component = gameObject.GetComponent<Navigation>();
         }
 
         public override string ToString () => NiceName();

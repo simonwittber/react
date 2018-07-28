@@ -11,7 +11,6 @@ namespace DifferentMethods.React.Components
 
         public void OnPointerClick(PointerEventData eventData)
         {
-            node.Context.Update(gameObject);
             BaseNode.ExecuteNode(node);
         }
 

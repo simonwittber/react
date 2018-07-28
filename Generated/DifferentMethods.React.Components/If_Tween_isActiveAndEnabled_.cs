@@ -14,7 +14,7 @@ namespace React.Generated {
     {
 
 
-        DifferentMethods.React.Components.Tween Component;
+        protected DifferentMethods.React.Components.Tween Component { get; set; }
 
         protected override NodeState Execute() 
         {
@@ -25,7 +25,7 @@ namespace React.Generated {
 
         public override void OnEnable() {
             base.OnEnable();
-            Component = Reactor.GetComponent<DifferentMethods.React.Components.Tween>();
+            Component = gameObject.GetComponent<DifferentMethods.React.Components.Tween>();
             
         }
 

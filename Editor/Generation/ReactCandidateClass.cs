@@ -206,7 +206,12 @@ namespace DifferentMethods.React.Generation
                 typeof(Camera),
                 typeof(Animation),
                 typeof(ParticleSystem),
-                typeof(TrailRenderer)
+                typeof(TrailRenderer),
+                typeof(AudioEchoFilter), typeof(AudioChorusFilter), typeof(AudioReverbFilter),
+                typeof(AudioLowPassFilter), typeof(AudioHighPassFilter), typeof(AudioDistortionFilter),
+                typeof(HingeJoint),typeof(HingeJoint2D),
+                typeof(LineRenderer),
+                typeof(SpriteRenderer)
             };
             foreach (var i in commonTypes)
             {

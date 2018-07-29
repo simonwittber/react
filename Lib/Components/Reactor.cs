@@ -118,6 +118,7 @@ namespace DifferentMethods.React.Components
             if (Root == null) return;
             foreach (var node in Root.AllDescendants)
                 node.OnValidate();
+            Root.Configure(this, gameObject);
             foreach (var node in Root.AllDescendants)
                 node.OnEnable();
         }

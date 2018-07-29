@@ -108,7 +108,7 @@ namespace DifferentMethods.React.Components
 
         public void OnEnable()
         {
-            AddRequiredComponents();
+            if (Application.isPlaying) AddRequiredComponents();
             EnableAllNodes();
             if (Application.isPlaying) StartCoroutine(Updater());
         }

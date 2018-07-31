@@ -26,7 +26,7 @@ namespace DifferentMethods.React.Components
 
         [SerializeField] ReactSerializer serializer;
         Dictionary<string, Label> labels = new Dictionary<string, Label>();
-        Dictionary<string, OnMessage> messageReceivers = new Dictionary<string, OnMessage>();
+        Dictionary<int, OnMessage> messageReceivers = new Dictionary<int, OnMessage>();
         TaskList taskList = new TaskList();
         PrioritySet<Delay> waitingNodes = new PrioritySet<Delay>();
 
@@ -56,7 +56,6 @@ namespace DifferentMethods.React.Components
         {
             if (!string.IsNullOrEmpty(node.id))
             {
-                // Log("Registering Export", node.id);
                 exports[node.id] = node;
             }
         }
@@ -71,23 +70,27 @@ namespace DifferentMethods.React.Components
 
         public void RegisterReceiver(OnMessage node)
         {
-            if (!string.IsNullOrEmpty(node.id))
+            if (node._id != 0)
             {
-                Log("Registering Message Receiver", node.id);
-                messageReceivers[node.id] = node;
+                messageReceivers[node._id] = node;
             }
         }
 
         public void ReceiveMessage(string message, GameObject sender)
         {
+            ReceiveMessage(message.GetHashCode(), sender);
+        }
+
+        public void ReceiveMessage(int messageId, GameObject sender)
+        {
             OnMessage node;
-            if (messageReceivers.TryGetValue(message, out node))
+            if (messageReceivers.TryGetValue(messageId, out node))
             {
                 BaseNode.ExecuteNode(node);
             }
             else
             {
-                Log("Warning", $"No message receiver for {message}.");
+                Log("Warning", $"No message receiver for {messageId}.");
             }
         }
 

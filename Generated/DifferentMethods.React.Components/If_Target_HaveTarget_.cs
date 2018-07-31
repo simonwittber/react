@@ -4,7 +4,6 @@ using DifferentMethods.React.Components;
 
 
 namespace React.Generated {
-
     /// <summary>
     /// Executes child if result of Target.HaveTarget on the active gameObject is true.
     /// </summary>
@@ -12,7 +11,6 @@ namespace React.Generated {
     [System.Serializable]
     public class If_Target_HaveTarget_ : DecoratorNode
     {
-
 
         protected DifferentMethods.React.Components.Target Component { get; set; }
 
@@ -23,17 +21,11 @@ namespace React.Generated {
             return NodeState.NoResult;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            Component = gameObject.GetComponent<DifferentMethods.React.Components.Target>();
-            
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<DifferentMethods.React.Components.Target>();
         public override string ToString() => NiceName();
         public static string NiceName() => "IF Target.HaveTarget";
         public static string GetMenuPath() => "Target/If/HaveTarget";
         public static string Signature() => " ()";
         public override System.Type GetWrappedType() => typeof(DifferentMethods.React.Components.Target);
-
     }
 }

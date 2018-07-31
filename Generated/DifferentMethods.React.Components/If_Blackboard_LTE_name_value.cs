@@ -5,7 +5,6 @@ using System;
 
 
 namespace React.Generated {
-
     /// <summary>
     /// Executes child if result of Blackboard.LTE on the active gameObject is true.
     /// </summary>
@@ -16,7 +15,6 @@ namespace React.Generated {
         public string id;
         public float value;
 
-
         protected DifferentMethods.React.Components.Blackboard Component { get; set; }
 
         protected override NodeState Execute() 
@@ -26,17 +24,11 @@ namespace React.Generated {
             return NodeState.NoResult;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            Component = gameObject.GetComponent<DifferentMethods.React.Components.Blackboard>();
-            
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<DifferentMethods.React.Components.Blackboard>();
         public override string ToString() => NiceName();
         public static string NiceName() => "IF Blackboard.LTE";
         public static string GetMenuPath() => "Blackboard/If/LTE";
         public static string Signature() => " (name,value)";
         public override System.Type GetWrappedType() => typeof(DifferentMethods.React.Components.Blackboard);
-
     }
 }

@@ -24,7 +24,6 @@ namespace DifferentMethods.React.Components
                 var direction = Vector3.Slerp(-transform.right, transform.right, Random.value);
                 var destination = transform.position + (direction * maxDistance);
                 agent.SetDestination(destination);
-                Debug.DrawLine(transform.position, destination, Color.magenta, 1);
             }
         }
 

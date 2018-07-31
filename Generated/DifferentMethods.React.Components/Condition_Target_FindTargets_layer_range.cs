@@ -10,30 +10,24 @@ namespace React.Generated {
     /// </summary>
     
     [System.Serializable]
-    public class Condition_Target_FindTargets_tag_range : LeafNode
+    public class Condition_Target_FindTargets_layer_range : LeafNode
     {
-        public string tag;
+        public UnityEngine.LayerMask layer;
         public float range;
-
 
         protected DifferentMethods.React.Components.Target Component { get; set; }
 
         protected override NodeState Execute() {
-            if(Component.FindTargets(tag, range)) 
+            if(Component.FindTargets(layer, range)) 
                 return NodeState.Success;
             return NodeState.Failure;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            
-            Component = gameObject.GetComponent<DifferentMethods.React.Components.Target>();
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<DifferentMethods.React.Components.Target>();
         public override string ToString() => NiceName();
         public static string NiceName() => "CHECK Target.FindTargets";
         public static string GetMenuPath() => "Target/Condition/FindTargets";
-        public static string Signature() => " (tag,range)";
+        public static string Signature() => " (layer,range)";
         public override System.Type GetWrappedType() => typeof(DifferentMethods.React.Components.Target);
     }
 }

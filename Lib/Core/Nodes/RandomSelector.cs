@@ -39,6 +39,8 @@ namespace DifferentMethods.React
                         if (policy == RandomSequencePolicy.AlwaysShuffle || policy == RandomSequencePolicy.ShuffleOnSuccess)
                             Shuffle();
                         return NodeState.Success;
+                    case NodeState.ContinueNextFrame:
+                        return NodeState.ContinueNextFrame;
                 }
                 if (NextChild())
                     continue;

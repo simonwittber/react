@@ -4,7 +4,6 @@ using DifferentMethods.React.Components;
 
 
 namespace React.Generated {
-
     /// <summary>
     /// Executes child if result of Tween.isActiveAndEnabled on the active gameObject is true.
     /// </summary>
@@ -12,7 +11,6 @@ namespace React.Generated {
     [System.Serializable]
     public class If_Tween_isActiveAndEnabled_ : DecoratorNode
     {
-
 
         protected DifferentMethods.React.Components.Tween Component { get; set; }
 
@@ -23,17 +21,11 @@ namespace React.Generated {
             return NodeState.NoResult;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            Component = gameObject.GetComponent<DifferentMethods.React.Components.Tween>();
-            
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<DifferentMethods.React.Components.Tween>();
         public override string ToString() => NiceName();
         public static string NiceName() => "IF Tween.isActiveAndEnabled";
         public static string GetMenuPath() => "Tween/If/isActiveAndEnabled";
         public static string Signature() => " ()";
         public override System.Type GetWrappedType() => typeof(DifferentMethods.React.Components.Tween);
-
     }
 }

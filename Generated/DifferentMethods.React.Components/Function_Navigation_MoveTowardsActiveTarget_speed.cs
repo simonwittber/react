@@ -5,7 +5,6 @@ using System;
 
 
 namespace React.Generated {
-
     /// <summary>
     /// Executes method call Navigation.MoveTowardsActiveTarget on the active gameObject, then returns a NoResult state.
     /// </summary>
@@ -15,7 +14,6 @@ namespace React.Generated {
     {
         public float speed;
 
-
         protected DifferentMethods.React.Components.Navigation Component { get; set; }
 
         protected override NodeState Execute() {
@@ -23,12 +21,7 @@ namespace React.Generated {
             return NodeState.NoResult;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            Component = gameObject.GetComponent<DifferentMethods.React.Components.Navigation>();
-            
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<DifferentMethods.React.Components.Navigation>();
         public override string ToString() => NiceName();
         public static string NiceName() => "Navigation.MoveTowardsActiveTarget";
         public static string GetMenuPath() => "Navigation/Function/MoveTowardsActiveTarget";
@@ -36,6 +29,5 @@ namespace React.Generated {
         public override System.Type GetWrappedType() => typeof(DifferentMethods.React.Components.Navigation);
 
         public static int leafNodeId = ReactTypeRegister.RegisterNodeClass(typeof(DifferentMethods.React.Components.Navigation), typeof(Function_Navigation_MoveTowardsActiveTarget_speed));
-
     }
 }

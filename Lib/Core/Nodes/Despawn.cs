@@ -14,7 +14,7 @@ namespace DifferentMethods.React
         {
             GameObjectPool.Return(instance);
             instance = null;
-            return NodeState.Success;
+            return NodeState.NoResult;
         }
 
     }

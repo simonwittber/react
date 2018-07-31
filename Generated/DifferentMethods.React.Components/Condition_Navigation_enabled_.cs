@@ -12,7 +12,6 @@ namespace React.Generated {
     public class Condition_Navigation_enabled_ : LeafNode
     {
 
-
         protected DifferentMethods.React.Components.Navigation Component { get; set; }
 
         protected override NodeState Execute() {
@@ -21,12 +20,7 @@ namespace React.Generated {
             return NodeState.Failure;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            
-            Component = gameObject.GetComponent<DifferentMethods.React.Components.Navigation>();
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<DifferentMethods.React.Components.Navigation>();
         public override string ToString() => NiceName();
         public static string NiceName() => "CHECK Navigation.enabled";
         public static string GetMenuPath() => "Navigation/Condition/enabled";

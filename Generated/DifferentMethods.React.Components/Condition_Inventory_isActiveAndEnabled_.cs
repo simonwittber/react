@@ -12,7 +12,6 @@ namespace React.Generated {
     public class Condition_Inventory_isActiveAndEnabled_ : LeafNode
     {
 
-
         protected DifferentMethods.React.Components.Inventory Component { get; set; }
 
         protected override NodeState Execute() {
@@ -21,12 +20,7 @@ namespace React.Generated {
             return NodeState.Failure;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            
-            Component = gameObject.GetComponent<DifferentMethods.React.Components.Inventory>();
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<DifferentMethods.React.Components.Inventory>();
         public override string ToString() => NiceName();
         public static string NiceName() => "CHECK Inventory.isActiveAndEnabled";
         public static string GetMenuPath() => "Inventory/Condition/isActiveAndEnabled";

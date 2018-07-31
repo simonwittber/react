@@ -5,7 +5,6 @@ using System;
 
 
 namespace React.Generated {
-
     /// <summary>
     /// Executes method call Inventory.Decrement on the active gameObject, then returns a NoResult state.
     /// </summary>
@@ -15,7 +14,6 @@ namespace React.Generated {
     {
         public string item;
 
-
         protected DifferentMethods.React.Components.Inventory Component { get; set; }
 
         protected override NodeState Execute() {
@@ -23,12 +21,7 @@ namespace React.Generated {
             return NodeState.NoResult;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            Component = gameObject.GetComponent<DifferentMethods.React.Components.Inventory>();
-            
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<DifferentMethods.React.Components.Inventory>();
         public override string ToString() => NiceName();
         public static string NiceName() => "Inventory.Decrement";
         public static string GetMenuPath() => "Inventory/Function/Decrement";
@@ -36,6 +29,5 @@ namespace React.Generated {
         public override System.Type GetWrappedType() => typeof(DifferentMethods.React.Components.Inventory);
 
         public static int leafNodeId = ReactTypeRegister.RegisterNodeClass(typeof(DifferentMethods.React.Components.Inventory), typeof(Function_Inventory_Decrement_item));
-
     }
 }

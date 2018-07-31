@@ -17,10 +17,13 @@ namespace DifferentMethods.React
             if (Child == null)
                 return NodeState.NoResult;
             var result = ExecuteNode(Child);
-            if (result == NodeState.Success)
-                return result;
-            else
-                return NodeState.ContinueNextFrame;
+            switch (result)
+            {
+                case NodeState.Success:
+                    return NodeState.Success;
+                default:
+                    return NodeState.ContinueNextFrame;
+            }
         }
 
         public override string ToString()

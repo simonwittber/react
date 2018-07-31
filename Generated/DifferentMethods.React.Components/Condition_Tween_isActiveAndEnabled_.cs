@@ -12,7 +12,6 @@ namespace React.Generated {
     public class Condition_Tween_isActiveAndEnabled_ : LeafNode
     {
 
-
         protected DifferentMethods.React.Components.Tween Component { get; set; }
 
         protected override NodeState Execute() {
@@ -21,12 +20,7 @@ namespace React.Generated {
             return NodeState.Failure;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            
-            Component = gameObject.GetComponent<DifferentMethods.React.Components.Tween>();
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<DifferentMethods.React.Components.Tween>();
         public override string ToString() => NiceName();
         public static string NiceName() => "CHECK Tween.isActiveAndEnabled";
         public static string GetMenuPath() => "Tween/Condition/isActiveAndEnabled";

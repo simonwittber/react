@@ -15,8 +15,6 @@ namespace DifferentMethods.React
     [CoreNode]
     public class ToDo : BranchNode
     {
-
-
         protected override NodeState Execute()
         {
             var result = ExecuteNode(ActiveChild);

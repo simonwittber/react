@@ -10,6 +10,7 @@ namespace DifferentMethods.React.Components
         public string blackboardName = "Global Blackboard";
 
         static Dictionary<string, float> values = new Dictionary<string, float>();
+        static Stack<string> stateStack = new Stack<string>();
 
         [ContextMenu("Dump")]
         public void Dump()
@@ -18,6 +19,24 @@ namespace DifferentMethods.React.Components
             {
                 Debug.Log(kv.Key + " : " + kv.Value);
             }
+        }
+
+        public void PushState(string state)
+        {
+            stateStack.Push(state);
+        }
+
+        public void PopState()
+        {
+            if (stateStack.Count > 0)
+                stateStack.Pop();
+        }
+
+        public bool StateIs(string state)
+        {
+            if (stateStack.Count > 0)
+                return stateStack.Peek() == state;
+            return false;
         }
 
         public float Get(string name)

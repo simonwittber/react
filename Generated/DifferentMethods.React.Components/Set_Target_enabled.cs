@@ -5,7 +5,6 @@ using System;
 
 
 namespace React.Generated {
-
     /// <summary>
     /// Sets Target.enabled on the active gameObject to a value. 
     /// 
@@ -23,11 +22,7 @@ namespace React.Generated {
             return NodeState.NoResult;
         }
         
-        public override void OnEnable() {
-            base.OnEnable();
-            Component = gameObject.GetComponent<Target>();
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<Target>();
         public override string ToString () => NiceName();
         public static string NiceName() => "SET Target.enabled";
         public static string GetMenuPath() => "Target/Set/enabled";

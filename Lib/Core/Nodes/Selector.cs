@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace DifferentMethods.React
 {
-
     /// <summary>
     /// Execute all children until a child returns a success state.
     /// </summary>
@@ -12,14 +11,12 @@ namespace DifferentMethods.React
     [CoreNode]
     public class Selector : BranchNode
     {
-
         protected override NodeState Execute()
         {
             while (true)
             {
                 switch (ExecuteNode(ActiveChild))
                 {
-
                     case NodeState.Failure:
                     case NodeState.NoResult:
                         break;
@@ -27,7 +24,6 @@ namespace DifferentMethods.React
                         Reset();
                         return NodeState.Success;
                     case NodeState.ContinueNextFrame:
-                        Reset();
                         return NodeState.ContinueNextFrame;
                 }
                 if (NextChild())
@@ -42,5 +38,4 @@ namespace DifferentMethods.React
             return "Selector _s";
         }
     }
-
 }

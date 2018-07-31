@@ -11,11 +11,7 @@ namespace DifferentMethods.React
         {
             if (Child != null)
             {
-                var result = ExecuteNode(Child);
-                if (result != NodeState.ContinueNextFrame)
-                {
-
-                }
+                ExecuteNode(Child);
             }
             return NodeState.ContinueNextFrame;
         }

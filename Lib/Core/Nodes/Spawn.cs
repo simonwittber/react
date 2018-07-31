@@ -31,7 +31,7 @@ namespace DifferentMethods.React
                 target.transform.position = Reactor.gameObject.transform.position;
             if (matchRotation)
                 target.transform.rotation = Reactor.gameObject.transform.rotation;
-            return NodeState.Success;
+            return NodeState.NoResult;
         }
 
         public static string GetMenuPath()

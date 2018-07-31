@@ -14,7 +14,6 @@ namespace React.Generated {
     {
         public float distance;
 
-
         protected DifferentMethods.React.Components.Target Component { get; set; }
 
         protected override NodeState Execute() {
@@ -23,12 +22,7 @@ namespace React.Generated {
             return NodeState.Failure;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            
-            Component = gameObject.GetComponent<DifferentMethods.React.Components.Target>();
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<DifferentMethods.React.Components.Target>();
         public override string ToString() => NiceName();
         public static string NiceName() => "CHECK Target.TargetIsFurtherThan";
         public static string GetMenuPath() => "Target/Condition/TargetIsFurtherThan";

@@ -39,5 +39,4 @@ namespace DifferentMethods.React
             return "Sequence _q";
         }
     }
-
 }

@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 namespace DifferentMethods.React
 {
-
     /// <summary>
     /// This decorator create a named entrypoint which can be executed via a method call on the component.
     /// </summary>
@@ -14,9 +13,11 @@ namespace DifferentMethods.React
     public class OnMessage : DecoratorNode
     {
         public string id;
+        public int _id { get; private set; }
 
         public override void OnEnable()
         {
+            _id = id.GetHashCode();
             Reactor.RegisterReceiver(this);
         }
 
@@ -35,5 +36,4 @@ namespace DifferentMethods.React
             return NodeState.NoResult;
         }
     }
-
 }

@@ -36,16 +36,16 @@ namespace DifferentMethods.React.Components
             return false;
         }
 
-        public bool FindTargets(string tag, float range)
+        public bool FindTargets(LayerMask layer, float range)
         {
-            var hits = Physics.OverlapSphere(transform.position, range);
+            var hits = Physics.OverlapSphere(transform.position, range, layer.value);
             targets.Clear();
             if (hits.Length > 0)
             {
                 for (int i = 0; i < hits.Length; i++)
                 {
                     var c = hits[i];
-                    if (c.CompareTag(tag) && c.gameObject != gameObject)
+                    if (c.gameObject != gameObject)
                     {
                         targets.Add(c.gameObject);
                     }

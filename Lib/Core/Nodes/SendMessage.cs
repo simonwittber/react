@@ -12,16 +12,21 @@ namespace DifferentMethods.React
     public class SendMessage : LeafNode
     {
         public Reactor target;
-        public string message;
+        public string id;
+        public int _id { get; private set; }
+
+        public override void OnEnable()
+        {
+            _id = id.GetHashCode();
+        }
 
         protected override NodeState Execute()
         {
 
             if (target == null)
                 return NodeState.NoResult;
-            target.ReceiveMessage(message, Reactor.gameObject);
+            target.ReceiveMessage(_id, Reactor.gameObject);
             return NodeState.NoResult;
         }
-
     }
 }

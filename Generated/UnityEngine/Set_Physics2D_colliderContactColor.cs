@@ -3,7 +3,6 @@ using UnityEngine;
 
 
 namespace React.Generated {
-
     /// <summary>
     /// Sets Physics2D.colliderContactColor on the class to a value. 
     /// 

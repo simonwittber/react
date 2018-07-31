@@ -8,7 +8,5 @@ namespace DifferentMethods.React
     [AttributeUsageAttribute(AttributeTargets.Class)]
     public class CoreNodeAttribute : System.Attribute
     {
-
     }
-
 }

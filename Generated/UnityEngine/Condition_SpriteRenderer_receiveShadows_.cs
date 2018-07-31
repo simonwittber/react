@@ -11,7 +11,6 @@ namespace React.Generated {
     public class Condition_SpriteRenderer_receiveShadows_ : LeafNode
     {
 
-
         protected UnityEngine.SpriteRenderer Component { get; set; }
 
         protected override NodeState Execute() {
@@ -20,12 +19,7 @@ namespace React.Generated {
             return NodeState.Failure;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            
-            Component = gameObject.GetComponent<UnityEngine.SpriteRenderer>();
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<UnityEngine.SpriteRenderer>();
         public override string ToString() => NiceName();
         public static string NiceName() => "CHECK SpriteRenderer.receiveShadows";
         public static string GetMenuPath() => "SpriteRenderer/Condition/receiveShadows";

@@ -3,7 +3,6 @@ using UnityEngine;
 
 
 namespace React.Generated {
-
     /// <summary>
     /// Executes method call PlayerPrefs.DeleteAll on the class, then returns a NoResult state.
     /// </summary>
@@ -16,11 +15,6 @@ namespace React.Generated {
         protected override NodeState Execute() {
             UnityEngine.PlayerPrefs.DeleteAll();
             return NodeState.NoResult;
-        }
-
-        public override void OnEnable() {
-            base.OnEnable();
-            
         }
 
         public override string ToString() => NiceName();

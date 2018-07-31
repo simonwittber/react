@@ -11,7 +11,6 @@ namespace React.Generated {
     public class Condition_HingeJoint2D_enableCollision_ : LeafNode
     {
 
-
         protected UnityEngine.HingeJoint2D Component { get; set; }
 
         protected override NodeState Execute() {
@@ -20,12 +19,7 @@ namespace React.Generated {
             return NodeState.Failure;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            
-            Component = gameObject.GetComponent<UnityEngine.HingeJoint2D>();
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<UnityEngine.HingeJoint2D>();
         public override string ToString() => NiceName();
         public static string NiceName() => "CHECK HingeJoint2D.enableCollision";
         public static string GetMenuPath() => "HingeJoint2D/Condition/enableCollision";

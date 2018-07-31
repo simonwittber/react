@@ -3,7 +3,6 @@ using UnityEngine;
 [USING]
 
 namespace React.Generated {
-
     /// <summary>
     /// Sets [NICENAME] on the class to a value. 
     /// [HELPTEXT]

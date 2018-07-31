@@ -25,11 +25,6 @@ namespace React.Generated {
             return NodeState.Failure;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            
-        }
-
         public override string ToString() => NiceName();
         public static string NiceName() => "CHECK Physics.CapsuleCast";
         public static string GetMenuPath() => "Physics/Condition/CapsuleCast/(point1, point2, radius, direction, maxDistance, layerMask)";

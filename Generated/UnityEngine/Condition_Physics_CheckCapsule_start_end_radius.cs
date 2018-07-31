@@ -22,11 +22,6 @@ namespace React.Generated {
             return NodeState.Failure;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            
-        }
-
         public override string ToString() => NiceName();
         public static string NiceName() => "CHECK Physics.CheckCapsule";
         public static string GetMenuPath() => "Physics/Condition/CheckCapsule/(start, end, radius)";

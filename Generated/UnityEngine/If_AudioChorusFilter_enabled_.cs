@@ -3,7 +3,6 @@ using UnityEngine;
 
 
 namespace React.Generated {
-
     /// <summary>
     /// Executes child if result of AudioChorusFilter.enabled on the active gameObject is true.
     /// </summary>
@@ -11,7 +10,6 @@ namespace React.Generated {
     [System.Serializable]
     public class If_AudioChorusFilter_enabled_ : DecoratorNode
     {
-
 
         protected UnityEngine.AudioChorusFilter Component { get; set; }
 
@@ -22,17 +20,11 @@ namespace React.Generated {
             return NodeState.NoResult;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            Component = gameObject.GetComponent<UnityEngine.AudioChorusFilter>();
-            
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<UnityEngine.AudioChorusFilter>();
         public override string ToString() => NiceName();
         public static string NiceName() => "IF AudioChorusFilter.enabled";
         public static string GetMenuPath() => "AudioChorusFilter/If/enabled";
         public static string Signature() => " ()";
         public override System.Type GetWrappedType() => typeof(UnityEngine.AudioChorusFilter);
-
     }
 }

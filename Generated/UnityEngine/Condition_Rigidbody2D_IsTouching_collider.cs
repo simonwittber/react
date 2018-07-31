@@ -12,7 +12,6 @@ namespace React.Generated {
     {
         public UnityEngine.Collider2D collider;
 
-
         protected UnityEngine.Rigidbody2D Component { get; set; }
 
         protected override NodeState Execute() {
@@ -21,12 +20,7 @@ namespace React.Generated {
             return NodeState.Failure;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            
-            Component = gameObject.GetComponent<UnityEngine.Rigidbody2D>();
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<UnityEngine.Rigidbody2D>();
         public override string ToString() => NiceName();
         public static string NiceName() => "CHECK Rigidbody2D.IsTouching";
         public static string GetMenuPath() => "Rigidbody2D/Condition/IsTouching/(collider)";

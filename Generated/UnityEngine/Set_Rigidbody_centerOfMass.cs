@@ -3,7 +3,6 @@ using UnityEngine;
 
 
 namespace React.Generated {
-
     /// <summary>
     /// Sets Rigidbody.centerOfMass on the active gameObject to a value. 
     /// 
@@ -21,11 +20,7 @@ namespace React.Generated {
             return NodeState.NoResult;
         }
         
-        public override void OnEnable() {
-            base.OnEnable();
-            Component = gameObject.GetComponent<Rigidbody>();
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<Rigidbody>();
         public override string ToString () => NiceName();
         public static string NiceName() => "SET Rigidbody.centerOfMass";
         public static string GetMenuPath() => "Rigidbody/Set/centerOfMass";

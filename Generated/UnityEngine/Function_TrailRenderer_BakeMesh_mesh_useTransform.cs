@@ -4,7 +4,6 @@ using System;
 
 
 namespace React.Generated {
-
     /// <summary>
     /// Executes method call TrailRenderer.BakeMesh on the active gameObject, then returns a NoResult state.
     /// </summary>
@@ -15,7 +14,6 @@ namespace React.Generated {
         public UnityEngine.Mesh mesh;
         public bool useTransform;
 
-
         protected UnityEngine.TrailRenderer Component { get; set; }
 
         protected override NodeState Execute() {
@@ -23,12 +21,7 @@ namespace React.Generated {
             return NodeState.NoResult;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            Component = gameObject.GetComponent<UnityEngine.TrailRenderer>();
-            
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<UnityEngine.TrailRenderer>();
         public override string ToString() => NiceName();
         public static string NiceName() => "TrailRenderer.BakeMesh";
         public static string GetMenuPath() => "TrailRenderer/Function/BakeMesh/(mesh, useTransform)";
@@ -36,6 +29,5 @@ namespace React.Generated {
         public override System.Type GetWrappedType() => typeof(UnityEngine.TrailRenderer);
 
         public static int leafNodeId = ReactTypeRegister.RegisterNodeClass(typeof(UnityEngine.TrailRenderer), typeof(Function_TrailRenderer_BakeMesh_mesh_useTransform));
-
     }
 }

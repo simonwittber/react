@@ -11,7 +11,6 @@ namespace React.Generated {
     public class Condition_AudioHighPassFilter_enabled_ : LeafNode
     {
 
-
         protected UnityEngine.AudioHighPassFilter Component { get; set; }
 
         protected override NodeState Execute() {
@@ -20,12 +19,7 @@ namespace React.Generated {
             return NodeState.Failure;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            
-            Component = gameObject.GetComponent<UnityEngine.AudioHighPassFilter>();
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<UnityEngine.AudioHighPassFilter>();
         public override string ToString() => NiceName();
         public static string NiceName() => "CHECK AudioHighPassFilter.enabled";
         public static string GetMenuPath() => "AudioHighPassFilter/Condition/enabled";

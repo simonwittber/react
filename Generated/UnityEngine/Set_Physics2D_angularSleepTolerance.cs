@@ -4,7 +4,6 @@ using System;
 
 
 namespace React.Generated {
-
     /// <summary>
     /// Sets Physics2D.angularSleepTolerance on the class to a value. 
     /// 

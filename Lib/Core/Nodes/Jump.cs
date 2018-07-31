@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 namespace DifferentMethods.React
 {
-
     /// <summary>
     /// Jump to a label and execute the child.
     /// </summary>

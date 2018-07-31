@@ -14,7 +14,6 @@ namespace React.Generated {
         public string animation;
         public UnityEngine.PlayMode mode;
 
-
         protected UnityEngine.Animation Component { get; set; }
 
         protected override NodeState Execute() {
@@ -23,12 +22,7 @@ namespace React.Generated {
             return NodeState.Failure;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            
-            Component = gameObject.GetComponent<UnityEngine.Animation>();
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<UnityEngine.Animation>();
         public override string ToString() => NiceName();
         public static string NiceName() => "CHECK Animation.Play";
         public static string GetMenuPath() => "Animation/Condition/Play/(animation, mode)";

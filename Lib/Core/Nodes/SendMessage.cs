@@ -6,7 +6,6 @@ using DifferentMethods.React.Components;
 
 namespace DifferentMethods.React
 {
-
     [System.Serializable]
     [CoreNode]
     public class SendMessage : LeafNode
@@ -22,7 +21,6 @@ namespace DifferentMethods.React
 
         protected override NodeState Execute()
         {
-
             if (target == null)
                 return NodeState.NoResult;
             target.ReceiveMessage(_id, Reactor.gameObject);

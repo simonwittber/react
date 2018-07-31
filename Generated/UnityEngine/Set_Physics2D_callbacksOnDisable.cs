@@ -4,7 +4,6 @@ using System;
 
 
 namespace React.Generated {
-
     /// <summary>
     /// Sets Physics2D.callbacksOnDisable on the class to a value. 
     /// 

@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace DifferentMethods.React
 {
-
     /// <summary>
     /// This decorator will execute it's child when the OnTriggerStay message is received, if the layer mask matches the triggering gameObject.
     /// </summary>
@@ -22,5 +21,4 @@ namespace DifferentMethods.React
             return NodeState.NoResult;
         }
     }
-
 }

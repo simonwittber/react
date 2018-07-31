@@ -3,7 +3,6 @@ using UnityEngine;
 
 
 namespace React.Generated {
-
     /// <summary>
     /// Sets LineRenderer.alignment on the active gameObject to a value. 
     /// 
@@ -21,11 +20,7 @@ namespace React.Generated {
             return NodeState.NoResult;
         }
         
-        public override void OnEnable() {
-            base.OnEnable();
-            Component = gameObject.GetComponent<LineRenderer>();
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<LineRenderer>();
         public override string ToString () => NiceName();
         public static string NiceName() => "SET LineRenderer.alignment";
         public static string GetMenuPath() => "LineRenderer/Set/alignment";

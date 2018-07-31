@@ -3,7 +3,6 @@ using UnityEngine;
 
 
 namespace React.Generated {
-
     /// <summary>
     /// Sets Input.compositionCursorPos on the class to a value. 
     /// 

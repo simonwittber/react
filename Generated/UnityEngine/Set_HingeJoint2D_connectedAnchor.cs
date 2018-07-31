@@ -3,7 +3,6 @@ using UnityEngine;
 
 
 namespace React.Generated {
-
     /// <summary>
     /// Sets HingeJoint2D.connectedAnchor on the active gameObject to a value. 
     /// 
@@ -21,11 +20,7 @@ namespace React.Generated {
             return NodeState.NoResult;
         }
         
-        public override void OnEnable() {
-            base.OnEnable();
-            Component = gameObject.GetComponent<HingeJoint2D>();
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<HingeJoint2D>();
         public override string ToString () => NiceName();
         public static string NiceName() => "SET HingeJoint2D.connectedAnchor";
         public static string GetMenuPath() => "HingeJoint2D/Set/connectedAnchor";

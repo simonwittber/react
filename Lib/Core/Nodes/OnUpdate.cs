@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace DifferentMethods.React
 {
-
     /// <summary>
     /// This decorator will execute it's child every frame.
     /// </summary>
@@ -22,5 +21,4 @@ namespace DifferentMethods.React
             return NodeState.NoResult;
         }
     }
-
 }

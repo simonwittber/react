@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace DifferentMethods.React
 {
-
     /// <summary>
     /// This decorator will execute it's child when the OnStart message is received.
     /// </summary>
@@ -21,5 +20,4 @@ namespace DifferentMethods.React
             return NodeState.NoResult;
         }
     }
-
 }

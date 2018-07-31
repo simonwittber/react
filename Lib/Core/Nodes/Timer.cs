@@ -32,15 +32,8 @@ namespace DifferentMethods.React
                 return NodeState.ContinueNextFrame;
         }
 
-        public override string ToString()
-        {
-            return "Timer";
-        }
+        public override string ToString() => "Timer";
 
-        public static string GetMenuPath()
-        {
-            return "Timer";
-        }
+        public static string GetMenuPath() => "Timer";
     }
-
 }

@@ -33,7 +33,4 @@ namespace DifferentMethods.React
             return "Invert _i";
         }
     }
-
-
-
 }

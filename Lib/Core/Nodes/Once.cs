@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace DifferentMethods.React
 {
-
     /// <summary>
     /// This decorator will execute it's child once per gameObject.
     /// </summary>
@@ -26,5 +25,4 @@ namespace DifferentMethods.React
             return NodeState.NoResult;
         }
     }
-
 }

@@ -20,11 +20,6 @@ namespace React.Generated {
             return NodeState.Failure;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            
-        }
-
         public override string ToString() => NiceName();
         public static string NiceName() => "CHECK Physics.CheckBox";
         public static string GetMenuPath() => "Physics/Condition/CheckBox/(center, halfExtents)";

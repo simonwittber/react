@@ -4,7 +4,6 @@ using System;
 
 
 namespace React.Generated {
-
     /// <summary>
     /// Executes method call LineRenderer.Simplify on the active gameObject, then returns a NoResult state.
     /// </summary>
@@ -14,7 +13,6 @@ namespace React.Generated {
     {
         public float tolerance;
 
-
         protected UnityEngine.LineRenderer Component { get; set; }
 
         protected override NodeState Execute() {
@@ -22,12 +20,7 @@ namespace React.Generated {
             return NodeState.NoResult;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            Component = gameObject.GetComponent<UnityEngine.LineRenderer>();
-            
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<UnityEngine.LineRenderer>();
         public override string ToString() => NiceName();
         public static string NiceName() => "LineRenderer.Simplify";
         public static string GetMenuPath() => "LineRenderer/Function/Simplify";
@@ -35,6 +28,5 @@ namespace React.Generated {
         public override System.Type GetWrappedType() => typeof(UnityEngine.LineRenderer);
 
         public static int leafNodeId = ReactTypeRegister.RegisterNodeClass(typeof(UnityEngine.LineRenderer), typeof(Function_LineRenderer_Simplify_tolerance));
-
     }
 }

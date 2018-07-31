@@ -48,6 +48,5 @@ namespace DifferentMethods.React
         {
             return "Delay _d";
         }
-
     }
 }

@@ -4,7 +4,6 @@ using System;
 
 
 namespace React.Generated {
-
     /// <summary>
     /// Sets Input.backButtonLeavesApp on the class to a value. 
     /// 

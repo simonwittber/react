@@ -19,6 +19,4 @@ namespace DifferentMethods.React
             return NodeState.NoResult;
         }
     }
-
-
 }

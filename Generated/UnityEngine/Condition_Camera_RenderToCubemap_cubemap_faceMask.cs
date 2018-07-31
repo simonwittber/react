@@ -14,7 +14,6 @@ namespace React.Generated {
         public UnityEngine.RenderTexture cubemap;
         public int faceMask;
 
-
         protected UnityEngine.Camera Component { get; set; }
 
         protected override NodeState Execute() {
@@ -23,12 +22,7 @@ namespace React.Generated {
             return NodeState.Failure;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            
-            Component = gameObject.GetComponent<UnityEngine.Camera>();
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<UnityEngine.Camera>();
         public override string ToString() => NiceName();
         public static string NiceName() => "CHECK Camera.RenderToCubemap";
         public static string GetMenuPath() => "Camera/Condition/RenderToCubemap/(cubemap, faceMask)";

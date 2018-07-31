@@ -11,7 +11,6 @@ namespace React.Generated {
     public class Condition_HingeJoint_autoConfigureConnectedAnchor_ : LeafNode
     {
 
-
         protected UnityEngine.HingeJoint Component { get; set; }
 
         protected override NodeState Execute() {
@@ -20,12 +19,7 @@ namespace React.Generated {
             return NodeState.Failure;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            
-            Component = gameObject.GetComponent<UnityEngine.HingeJoint>();
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<UnityEngine.HingeJoint>();
         public override string ToString() => NiceName();
         public static string NiceName() => "CHECK HingeJoint.autoConfigureConnectedAnchor";
         public static string GetMenuPath() => "HingeJoint/Condition/autoConfigureConnectedAnchor";

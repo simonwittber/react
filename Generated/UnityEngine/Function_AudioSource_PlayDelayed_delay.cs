@@ -4,7 +4,6 @@ using System;
 
 
 namespace React.Generated {
-
     /// <summary>
     /// Executes method call AudioSource.PlayDelayed on the active gameObject, then returns a NoResult state.
     /// </summary>
@@ -14,7 +13,6 @@ namespace React.Generated {
     {
         public float delay;
 
-
         protected UnityEngine.AudioSource Component { get; set; }
 
         protected override NodeState Execute() {
@@ -22,12 +20,7 @@ namespace React.Generated {
             return NodeState.NoResult;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            Component = gameObject.GetComponent<UnityEngine.AudioSource>();
-            
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<UnityEngine.AudioSource>();
         public override string ToString() => NiceName();
         public static string NiceName() => "AudioSource.PlayDelayed";
         public static string GetMenuPath() => "AudioSource/Function/PlayDelayed";
@@ -35,6 +28,5 @@ namespace React.Generated {
         public override System.Type GetWrappedType() => typeof(UnityEngine.AudioSource);
 
         public static int leafNodeId = ReactTypeRegister.RegisterNodeClass(typeof(UnityEngine.AudioSource), typeof(Function_AudioSource_PlayDelayed_delay));
-
     }
 }

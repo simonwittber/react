@@ -4,7 +4,6 @@ using System;
 
 
 namespace React.Generated {
-
     /// <summary>
     /// Executes child if result of RemoteSettings.HasKey on the class is true.
     /// </summary>
@@ -21,11 +20,6 @@ namespace React.Generated {
                 return ExecuteNode(Child);
             }
             return NodeState.NoResult;
-        }
-
-        public override void OnEnable() {
-            base.OnEnable();
-            
         }
 
         public override string ToString() => NiceName();

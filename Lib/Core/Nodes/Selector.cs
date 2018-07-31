@@ -33,9 +33,6 @@ namespace DifferentMethods.React
             }
         }
 
-        public static string GetMenuPath()
-        {
-            return "Selector _s";
-        }
+        public static string GetMenuPath() => "Selector _s";
     }
 }

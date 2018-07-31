@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace DifferentMethods.React
 {
-
     /// <summary>
     /// Executes the child every other time this node is executed. Starting state can be set. 
     /// </summary>
@@ -27,6 +26,4 @@ namespace DifferentMethods.React
             return NodeState.NoResult;
         }
     }
-
-
 }

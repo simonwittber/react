@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace DifferentMethods.React
 {
-
     /// <summary>
     /// Ensures that the child is only executed once every X seconds, regardless of the number of times the graph is executed.
     /// </summary>
@@ -32,7 +31,4 @@ namespace DifferentMethods.React
             return NodeState.NoResult;
         }
     }
-
-
-
 }

@@ -3,7 +3,6 @@ using UnityEngine;
 
 
 namespace React.Generated {
-
     /// <summary>
     /// Executes method call Transform.SetAsLastSibling on the active gameObject, then returns a NoResult state.
     /// </summary>
@@ -12,7 +11,6 @@ namespace React.Generated {
     public class Function_Transform_SetAsLastSibling_ : LeafNode
     {
 
-
         protected UnityEngine.Transform Component { get; set; }
 
         protected override NodeState Execute() {
@@ -20,12 +18,7 @@ namespace React.Generated {
             return NodeState.NoResult;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            Component = gameObject.GetComponent<UnityEngine.Transform>();
-            
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<UnityEngine.Transform>();
         public override string ToString() => NiceName();
         public static string NiceName() => "Transform.SetAsLastSibling";
         public static string GetMenuPath() => "Transform/Function/SetAsLastSibling";
@@ -33,6 +26,5 @@ namespace React.Generated {
         public override System.Type GetWrappedType() => typeof(UnityEngine.Transform);
 
         public static int leafNodeId = ReactTypeRegister.RegisterNodeClass(typeof(UnityEngine.Transform), typeof(Function_Transform_SetAsLastSibling_));
-
     }
 }

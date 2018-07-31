@@ -11,7 +11,6 @@ namespace React.Generated {
     public class Condition_Renderer_HasPropertyBlock_ : LeafNode
     {
 
-
         protected UnityEngine.Renderer Component { get; set; }
 
         protected override NodeState Execute() {
@@ -20,12 +19,7 @@ namespace React.Generated {
             return NodeState.Failure;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            
-            Component = gameObject.GetComponent<UnityEngine.Renderer>();
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<UnityEngine.Renderer>();
         public override string ToString() => NiceName();
         public static string NiceName() => "CHECK Renderer.HasPropertyBlock";
         public static string GetMenuPath() => "Renderer/Condition/HasPropertyBlock";

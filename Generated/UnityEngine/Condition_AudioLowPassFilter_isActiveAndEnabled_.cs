@@ -11,7 +11,6 @@ namespace React.Generated {
     public class Condition_AudioLowPassFilter_isActiveAndEnabled_ : LeafNode
     {
 
-
         protected UnityEngine.AudioLowPassFilter Component { get; set; }
 
         protected override NodeState Execute() {
@@ -20,12 +19,7 @@ namespace React.Generated {
             return NodeState.Failure;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            
-            Component = gameObject.GetComponent<UnityEngine.AudioLowPassFilter>();
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<UnityEngine.AudioLowPassFilter>();
         public override string ToString() => NiceName();
         public static string NiceName() => "CHECK AudioLowPassFilter.isActiveAndEnabled";
         public static string GetMenuPath() => "AudioLowPassFilter/Condition/isActiveAndEnabled";

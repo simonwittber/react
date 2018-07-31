@@ -3,7 +3,6 @@ using UnityEngine;
 
 
 namespace React.Generated {
-
     /// <summary>
     /// Executes method call AudioSource.Stop on the active gameObject, then returns a NoResult state.
     /// </summary>
@@ -12,7 +11,6 @@ namespace React.Generated {
     public class Function_AudioSource_Stop_ : LeafNode
     {
 
-
         protected UnityEngine.AudioSource Component { get; set; }
 
         protected override NodeState Execute() {
@@ -20,12 +18,7 @@ namespace React.Generated {
             return NodeState.NoResult;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            Component = gameObject.GetComponent<UnityEngine.AudioSource>();
-            
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<UnityEngine.AudioSource>();
         public override string ToString() => NiceName();
         public static string NiceName() => "AudioSource.Stop";
         public static string GetMenuPath() => "AudioSource/Function/Stop";
@@ -33,6 +26,5 @@ namespace React.Generated {
         public override System.Type GetWrappedType() => typeof(UnityEngine.AudioSource);
 
         public static int leafNodeId = ReactTypeRegister.RegisterNodeClass(typeof(UnityEngine.AudioSource), typeof(Function_AudioSource_Stop_));
-
     }
 }

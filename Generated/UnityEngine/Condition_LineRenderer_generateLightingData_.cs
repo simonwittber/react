@@ -11,7 +11,6 @@ namespace React.Generated {
     public class Condition_LineRenderer_generateLightingData_ : LeafNode
     {
 
-
         protected UnityEngine.LineRenderer Component { get; set; }
 
         protected override NodeState Execute() {
@@ -20,12 +19,7 @@ namespace React.Generated {
             return NodeState.Failure;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            
-            Component = gameObject.GetComponent<UnityEngine.LineRenderer>();
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<UnityEngine.LineRenderer>();
         public override string ToString() => NiceName();
         public static string NiceName() => "CHECK LineRenderer.generateLightingData";
         public static string GetMenuPath() => "LineRenderer/Condition/generateLightingData";

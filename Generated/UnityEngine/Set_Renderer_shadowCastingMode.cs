@@ -4,7 +4,6 @@ using UnityEngine.Rendering;
 
 
 namespace React.Generated {
-
     /// <summary>
     /// Sets Renderer.shadowCastingMode on the active gameObject to a value. 
     /// 
@@ -22,11 +21,7 @@ namespace React.Generated {
             return NodeState.NoResult;
         }
         
-        public override void OnEnable() {
-            base.OnEnable();
-            Component = gameObject.GetComponent<Renderer>();
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<Renderer>();
         public override string ToString () => NiceName();
         public static string NiceName() => "SET Renderer.shadowCastingMode";
         public static string GetMenuPath() => "Renderer/Set/shadowCastingMode";

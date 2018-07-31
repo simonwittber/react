@@ -4,7 +4,6 @@ using System;
 
 
 namespace React.Generated {
-
     /// <summary>
     /// Sets AudioHighPassFilter.enabled on the active gameObject to a value. 
     /// 
@@ -22,11 +21,7 @@ namespace React.Generated {
             return NodeState.NoResult;
         }
         
-        public override void OnEnable() {
-            base.OnEnable();
-            Component = gameObject.GetComponent<AudioHighPassFilter>();
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<AudioHighPassFilter>();
         public override string ToString () => NiceName();
         public static string NiceName() => "SET AudioHighPassFilter.enabled";
         public static string GetMenuPath() => "AudioHighPassFilter/Set/enabled";

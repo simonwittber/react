@@ -16,6 +16,5 @@ namespace DifferentMethods.React
             instance = null;
             return NodeState.NoResult;
         }
-
     }
 }

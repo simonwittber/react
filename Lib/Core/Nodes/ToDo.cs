@@ -1,8 +1,6 @@
 using System;
-
 using System.Collections;
 using System.Collections.Generic;
-
 
 
 namespace DifferentMethods.React
@@ -25,9 +23,7 @@ namespace DifferentMethods.React
             NextChild();
             return NodeState.NoResult;
         }
-
     }
-
 }
 
 

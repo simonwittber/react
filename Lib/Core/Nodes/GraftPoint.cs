@@ -20,5 +20,4 @@ namespace DifferentMethods.React
             return "Graft";
         }
     }
-
 }

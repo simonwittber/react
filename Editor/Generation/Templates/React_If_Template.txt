@@ -3,7 +3,6 @@ using UnityEngine;
 [USING]
 
 namespace React.Generated {
-
     /// <summary>
     /// Executes child if result of [NICENAME] on the active gameObject is true.
     /// </summary>
@@ -12,7 +11,6 @@ namespace React.Generated {
     public class [CLASSNAME] : DecoratorNode
     {
 [FIELDS]
-
         protected [COMPONENTTYPE] Component { get; set; }
 
         protected override NodeState Execute() 
@@ -22,17 +20,11 @@ namespace React.Generated {
             return NodeState.NoResult;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            Component = gameObject.GetComponent<[COMPONENTTYPE]>();
-            [ONENABLE_CODE]
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<[COMPONENTTYPE]>();
         public override string ToString() => NiceName();
         public static string NiceName() => "IF [NICENAME]";
         public static string GetMenuPath() => "[MENUPATH]";
         public static string Signature() => "[SIGNATURE]";
         public override System.Type GetWrappedType() => typeof([COMPONENTTYPE]);
-
     }
 }

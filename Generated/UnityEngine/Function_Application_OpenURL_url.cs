@@ -4,7 +4,6 @@ using System;
 
 
 namespace React.Generated {
-
     /// <summary>
     /// Executes method call Application.OpenURL on the class, then returns a NoResult state.
     /// </summary>
@@ -18,11 +17,6 @@ namespace React.Generated {
         protected override NodeState Execute() {
             UnityEngine.Application.OpenURL(url);
             return NodeState.NoResult;
-        }
-
-        public override void OnEnable() {
-            base.OnEnable();
-            
         }
 
         public override string ToString() => NiceName();

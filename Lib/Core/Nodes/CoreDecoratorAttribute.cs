@@ -5,7 +5,6 @@ using System;
 
 namespace DifferentMethods.React
 {
-
     [AttributeUsageAttribute(AttributeTargets.Class)]
     public class CoreDecoratorAttribute : System.Attribute
     {

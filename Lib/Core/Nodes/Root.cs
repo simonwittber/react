@@ -59,10 +59,6 @@ namespace DifferentMethods.React
             }
         }
 
-        public override string ToString()
-        {
-            return "";
-        }
-
+        public override string ToString() => "";
     }
 }

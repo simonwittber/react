@@ -25,10 +25,7 @@ namespace DifferentMethods.React
             return ExecuteNode(Child);
         }
 
-        public static string GetMenuPath()
-        {
-            return "With _w";
-        }
+        public static string GetMenuPath() => "With _w";
     }
 
 }

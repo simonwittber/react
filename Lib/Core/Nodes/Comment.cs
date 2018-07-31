@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 namespace DifferentMethods.React
 {
-
     /// <summary>
     /// Just a document node.
     /// </summary>

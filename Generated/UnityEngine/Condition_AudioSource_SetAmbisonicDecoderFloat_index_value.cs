@@ -14,7 +14,6 @@ namespace React.Generated {
         public int index;
         public float value;
 
-
         protected UnityEngine.AudioSource Component { get; set; }
 
         protected override NodeState Execute() {
@@ -23,12 +22,7 @@ namespace React.Generated {
             return NodeState.Failure;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            
-            Component = gameObject.GetComponent<UnityEngine.AudioSource>();
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<UnityEngine.AudioSource>();
         public override string ToString() => NiceName();
         public static string NiceName() => "CHECK AudioSource.SetAmbisonicDecoderFloat";
         public static string GetMenuPath() => "AudioSource/Condition/SetAmbisonicDecoderFloat";

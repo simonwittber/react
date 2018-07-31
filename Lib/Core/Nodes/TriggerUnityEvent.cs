@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 namespace DifferentMethods.React
 {
-
     /// <summary>
     /// Creates a named UnityEvent field in the generate component, which this node will execute.
     /// </summary>
@@ -24,9 +23,6 @@ namespace DifferentMethods.React
             return NodeState.NoResult;
         }
 
-        public override string ToString()
-        {
-            return "UnityEvent";
-        }
+        public override string ToString() => "UnityEvent";
     }
 }

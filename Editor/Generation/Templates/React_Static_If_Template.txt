@@ -3,7 +3,6 @@ using UnityEngine;
 [USING]
 
 namespace React.Generated {
-
     /// <summary>
     /// Executes child if result of [NICENAME] on the class is true.
     /// </summary>
@@ -19,11 +18,6 @@ namespace React.Generated {
                 return ExecuteNode(Child);
             }
             return NodeState.NoResult;
-        }
-
-        public override void OnEnable() {
-            base.OnEnable();
-            [ONENABLE_CODE]
         }
 
         public override string ToString() => NiceName();

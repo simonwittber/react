@@ -20,11 +20,6 @@ namespace React.Generated {
             return NodeState.Failure;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            
-        }
-
         public override string ToString() => NiceName();
         public static string NiceName() => "CHECK Physics2D.IsTouching";
         public static string GetMenuPath() => "Physics2D/Condition/IsTouching/(collider1, collider2)";

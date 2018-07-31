@@ -4,7 +4,6 @@ using UnityEngine.Rendering;
 
 
 namespace React.Generated {
-
     /// <summary>
     /// Sets LineRenderer.reflectionProbeUsage on the active gameObject to a value. 
     /// 
@@ -22,11 +21,7 @@ namespace React.Generated {
             return NodeState.NoResult;
         }
         
-        public override void OnEnable() {
-            base.OnEnable();
-            Component = gameObject.GetComponent<LineRenderer>();
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<LineRenderer>();
         public override string ToString () => NiceName();
         public static string NiceName() => "SET LineRenderer.reflectionProbeUsage";
         public static string GetMenuPath() => "LineRenderer/Set/reflectionProbeUsage";

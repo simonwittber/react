@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace DifferentMethods.React
 {
-
     /// <summary>
     /// Execute all children until one returns a failure.
     /// </summary>
@@ -34,9 +33,6 @@ namespace DifferentMethods.React
             }
         }
 
-        public static string GetMenuPath()
-        {
-            return "Sequence _q";
-        }
+        public static string GetMenuPath() => "Sequence _q";
     }
 }

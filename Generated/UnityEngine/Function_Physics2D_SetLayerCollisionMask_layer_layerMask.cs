@@ -4,7 +4,6 @@ using System;
 
 
 namespace React.Generated {
-
     /// <summary>
     /// Executes method call Physics2D.SetLayerCollisionMask on the class, then returns a NoResult state.
     /// </summary>
@@ -19,11 +18,6 @@ namespace React.Generated {
         protected override NodeState Execute() {
             UnityEngine.Physics2D.SetLayerCollisionMask(layer, layerMask);
             return NodeState.NoResult;
-        }
-
-        public override void OnEnable() {
-            base.OnEnable();
-            
         }
 
         public override string ToString() => NiceName();

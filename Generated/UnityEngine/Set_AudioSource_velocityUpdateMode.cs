@@ -3,7 +3,6 @@ using UnityEngine;
 
 
 namespace React.Generated {
-
     /// <summary>
     /// Sets AudioSource.velocityUpdateMode on the active gameObject to a value. 
     /// 
@@ -21,11 +20,7 @@ namespace React.Generated {
             return NodeState.NoResult;
         }
         
-        public override void OnEnable() {
-            base.OnEnable();
-            Component = gameObject.GetComponent<AudioSource>();
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<AudioSource>();
         public override string ToString () => NiceName();
         public static string NiceName() => "SET AudioSource.velocityUpdateMode";
         public static string GetMenuPath() => "AudioSource/Set/velocityUpdateMode";

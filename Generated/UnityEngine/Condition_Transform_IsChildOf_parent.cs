@@ -12,7 +12,6 @@ namespace React.Generated {
     {
         public UnityEngine.Transform parent;
 
-
         protected UnityEngine.Transform Component { get; set; }
 
         protected override NodeState Execute() {
@@ -21,12 +20,7 @@ namespace React.Generated {
             return NodeState.Failure;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            
-            Component = gameObject.GetComponent<UnityEngine.Transform>();
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<UnityEngine.Transform>();
         public override string ToString() => NiceName();
         public static string NiceName() => "CHECK Transform.IsChildOf";
         public static string GetMenuPath() => "Transform/Condition/IsChildOf";

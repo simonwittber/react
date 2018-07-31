@@ -11,7 +11,6 @@ namespace React.Generated {
     public class Condition_Rigidbody_useGravity_ : LeafNode
     {
 
-
         protected UnityEngine.Rigidbody Component { get; set; }
 
         protected override NodeState Execute() {
@@ -20,12 +19,7 @@ namespace React.Generated {
             return NodeState.Failure;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            
-            Component = gameObject.GetComponent<UnityEngine.Rigidbody>();
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<UnityEngine.Rigidbody>();
         public override string ToString() => NiceName();
         public static string NiceName() => "CHECK Rigidbody.useGravity";
         public static string GetMenuPath() => "Rigidbody/Condition/useGravity";

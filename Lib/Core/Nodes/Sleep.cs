@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 namespace DifferentMethods.React
 {
-
     [System.Serializable]
     [CoreNode]
     public class Sleep : LeafNode
@@ -31,6 +30,5 @@ namespace DifferentMethods.React
             }
             return NodeState.NoResult;
         }
-
     }
 }

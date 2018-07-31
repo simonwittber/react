@@ -3,7 +3,6 @@ using UnityEngine;
 
 
 namespace React.Generated {
-
     /// <summary>
     /// Executes method call Debug.DrawRay on the class, then returns a NoResult state.
     /// </summary>
@@ -19,11 +18,6 @@ namespace React.Generated {
         protected override NodeState Execute() {
             UnityEngine.Debug.DrawRay(start, dir, color);
             return NodeState.NoResult;
-        }
-
-        public override void OnEnable() {
-            base.OnEnable();
-            
         }
 
         public override string ToString() => NiceName();

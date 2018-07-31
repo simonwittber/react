@@ -11,7 +11,6 @@ namespace React.Generated {
     public class Condition_Transform_hasChanged_ : LeafNode
     {
 
-
         protected UnityEngine.Transform Component { get; set; }
 
         protected override NodeState Execute() {
@@ -20,12 +19,7 @@ namespace React.Generated {
             return NodeState.Failure;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            
-            Component = gameObject.GetComponent<UnityEngine.Transform>();
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<UnityEngine.Transform>();
         public override string ToString() => NiceName();
         public static string NiceName() => "CHECK Transform.hasChanged";
         public static string GetMenuPath() => "Transform/Condition/hasChanged";

@@ -78,10 +78,7 @@ namespace DifferentMethods.React
             return BaseNode.ExecuteNode(import);
         }
 
-        public override string ToString()
-        {
-            return "External";
-        }
+        public override string ToString() => "External";
     }
 
 

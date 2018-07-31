@@ -23,11 +23,6 @@ namespace React.Generated {
             return NodeState.Failure;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            
-        }
-
         public override string ToString() => NiceName();
         public static string NiceName() => "CHECK Handheld.PlayFullScreenMovie";
         public static string GetMenuPath() => "Handheld/Condition/PlayFullScreenMovie/(path, bgColor, controlMode, scalingMode)";

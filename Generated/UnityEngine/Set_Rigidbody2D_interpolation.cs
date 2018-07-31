@@ -3,7 +3,6 @@ using UnityEngine;
 
 
 namespace React.Generated {
-
     /// <summary>
     /// Sets Rigidbody2D.interpolation on the active gameObject to a value. 
     /// 
@@ -21,11 +20,7 @@ namespace React.Generated {
             return NodeState.NoResult;
         }
         
-        public override void OnEnable() {
-            base.OnEnable();
-            Component = gameObject.GetComponent<Rigidbody2D>();
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<Rigidbody2D>();
         public override string ToString () => NiceName();
         public static string NiceName() => "SET Rigidbody2D.interpolation";
         public static string GetMenuPath() => "Rigidbody2D/Set/interpolation";

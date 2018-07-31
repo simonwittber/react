@@ -60,14 +60,8 @@ namespace DifferentMethods.React
             }
         }
 
-        public override string ToString()
-        {
-            return "Random Sequence";
-        }
+        public override string ToString() => "Random Sequence";
 
-        public static string GetMenuPath()
-        {
-            return "Random/Sequence";
-        }
+        public static string GetMenuPath() => "Random/Sequence";
     }
 }

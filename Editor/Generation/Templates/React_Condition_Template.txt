@@ -11,7 +11,6 @@ namespace React.Generated {
     public class [CLASSNAME] : LeafNode
     {
 [FIELDS]
-
         protected [COMPONENTTYPE] Component { get; set; }
 
         protected override NodeState Execute() {
@@ -20,12 +19,7 @@ namespace React.Generated {
             return NodeState.Failure;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            [ONENABLE_CODE]
-            Component = gameObject.GetComponent<[COMPONENTTYPE]>();
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<[COMPONENTTYPE]>();
         public override string ToString() => NiceName();
         public static string NiceName() => "CHECK [NICENAME]";
         public static string GetMenuPath() => "[MENUPATH]";

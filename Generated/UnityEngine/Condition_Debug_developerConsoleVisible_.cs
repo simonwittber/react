@@ -18,11 +18,6 @@ namespace React.Generated {
             return NodeState.Failure;
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-            
-        }
-
         public override string ToString() => NiceName();
         public static string NiceName() => "CHECK Debug.developerConsoleVisible";
         public static string GetMenuPath() => "Debug/Condition/developerConsoleVisible";

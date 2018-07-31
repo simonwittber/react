@@ -16,5 +16,4 @@ namespace DifferentMethods.React
             return NodeState.ContinueNextFrame;
         }
     }
-
 }

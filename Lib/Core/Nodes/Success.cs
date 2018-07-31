@@ -9,6 +9,4 @@ namespace DifferentMethods.React
             return NodeState.Success;
         }
     }
-
-
 }

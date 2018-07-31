@@ -5,7 +5,6 @@ using UnityEngine;
 
 namespace DifferentMethods.React
 {
-
     public enum ParallelPolicy
     {
         FailIfOneFails,
@@ -95,9 +94,7 @@ namespace DifferentMethods.React
                 return NodeState.ContinueNextFrame;
             return NodeState.Success;
         }
-
     }
-
 }
 
 

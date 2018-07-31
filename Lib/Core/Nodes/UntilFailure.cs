@@ -27,15 +27,9 @@ namespace DifferentMethods.React
             }
         }
 
-        public override string ToString()
-        {
-            return "Until Failure";
-        }
+        public override string ToString() => "Until Failure";
 
-        public static string GetMenuPath()
-        {
-            return "Until/Failure";
-        }
+        public static string GetMenuPath() => "Until/Failure";
     }
 
 }

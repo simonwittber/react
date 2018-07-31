@@ -130,7 +130,7 @@ namespace DifferentMethods.React.Editor
             else if (fi.FieldType == typeof(string))
             {
                 rect.width = 96;
-                GUI.Label(rect, value.ToString());
+                GUI.Label(rect, value == null ? "" : value.ToString());
             }
             else if (fi.FieldType == typeof(bool))
             {

@@ -4,7 +4,6 @@ using UnityEngine.Rendering;
 
 
 namespace React.Generated {
-
     /// <summary>
     /// Sets Camera.opaqueSortMode on the active gameObject to a value. 
     /// 
@@ -22,11 +21,7 @@ namespace React.Generated {
             return NodeState.NoResult;
         }
         
-        public override void OnEnable() {
-            base.OnEnable();
-            Component = gameObject.GetComponent<Camera>();
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<Camera>();
         public override string ToString () => NiceName();
         public static string NiceName() => "SET Camera.opaqueSortMode";
         public static string GetMenuPath() => "Camera/Set/opaqueSortMode";

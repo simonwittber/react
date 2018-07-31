@@ -4,7 +4,6 @@ using System;
 
 
 namespace React.Generated {
-
     /// <summary>
     /// Sets AudioSource.spread on the active gameObject to a value. 
     /// 
@@ -22,11 +21,7 @@ namespace React.Generated {
             return NodeState.NoResult;
         }
         
-        public override void OnEnable() {
-            base.OnEnable();
-            Component = gameObject.GetComponent<AudioSource>();
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<AudioSource>();
         public override string ToString () => NiceName();
         public static string NiceName() => "SET AudioSource.spread";
         public static string GetMenuPath() => "AudioSource/Set/spread";

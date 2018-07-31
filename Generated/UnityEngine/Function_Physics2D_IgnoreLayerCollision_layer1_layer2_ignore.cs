@@ -4,7 +4,6 @@ using System;
 
 
 namespace React.Generated {
-
     /// <summary>
     /// Executes method call Physics2D.IgnoreLayerCollision on the class, then returns a NoResult state.
     /// </summary>
@@ -20,11 +19,6 @@ namespace React.Generated {
         protected override NodeState Execute() {
             UnityEngine.Physics2D.IgnoreLayerCollision(layer1, layer2, ignore);
             return NodeState.NoResult;
-        }
-
-        public override void OnEnable() {
-            base.OnEnable();
-            
         }
 
         public override string ToString() => NiceName();

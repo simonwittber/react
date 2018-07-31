@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace DifferentMethods.React
 {
-
     /// <summary>
     ///     /// Shuffles the children, then executes them in order until one returns a failure.
     /// </summary>
@@ -53,14 +52,8 @@ namespace DifferentMethods.React
             }
         }
 
-        public override string ToString()
-        {
-            return "Random Selector";
-        }
+        public override string ToString() => "Random Selector";
 
-        public static string GetMenuPath()
-        {
-            return "Random/Selector";
-        }
+        public static string GetMenuPath() => "Random/Selector";
     }
 }

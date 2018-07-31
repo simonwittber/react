@@ -3,7 +3,6 @@ using UnityEngine;
 [USING]
 
 namespace React.Generated {
-
     /// <summary>
     /// Sets [NICENAME] on the active gameObject to a value. 
     /// [HELPTEXT]
@@ -20,11 +19,7 @@ namespace React.Generated {
             return NodeState.NoResult;
         }
         
-        public override void OnEnable() {
-            base.OnEnable();
-            Component = gameObject.GetComponent<[COMPONENTTYPE]>();
-        }
-
+        public override void OnEnable() => Component = gameObject.GetComponent<[COMPONENTTYPE]>();
         public override string ToString () => NiceName();
         public static string NiceName() => "SET [NICENAME]";
         public static string GetMenuPath() => "[MENUPATH]";

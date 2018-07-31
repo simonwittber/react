@@ -9,6 +9,5 @@ namespace DifferentMethods.React
     public class ReactComponentDatabase : ScriptableObject
     {
         public MonoScript[] scripts;
-
     }
 }

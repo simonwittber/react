@@ -3,7 +3,6 @@ using UnityEngine;
 
 
 namespace React.Generated {
-
     /// <summary>
     /// Executes method call Camera.SetupCurrent on the class, then returns a NoResult state.
     /// </summary>
@@ -17,11 +16,6 @@ namespace React.Generated {
         protected override NodeState Execute() {
             UnityEngine.Camera.SetupCurrent(cur);
             return NodeState.NoResult;
-        }
-
-        public override void OnEnable() {
-            base.OnEnable();
-            
         }
 
         public override string ToString() => NiceName();

@@ -5,7 +5,6 @@ using UnityEngine;
 
 namespace DifferentMethods.React
 {
-
     /// <summary>
     /// Executes the child if random.value > probability. 
     /// </summary>
@@ -22,11 +21,6 @@ namespace DifferentMethods.React
             return ExecuteNode(Child);
         }
 
-        public static string GetMenuPath()
-        {
-            return "Chance _c";
-        }
+        public static string GetMenuPath() => "Chance _c";
     }
-
-
 }

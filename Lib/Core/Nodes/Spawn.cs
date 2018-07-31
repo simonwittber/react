@@ -5,7 +5,6 @@ using UnityEngine;
 
 namespace DifferentMethods.React
 {
-
     /// <summary>
     /// Changes the current context to use a gameObject or gameObject array referenced from the scene. If many is true, then a gameObject array is used.
     /// The target field specified the name of the variable in the component.
@@ -34,11 +33,6 @@ namespace DifferentMethods.React
             return NodeState.NoResult;
         }
 
-        public static string GetMenuPath()
-        {
-            return "Spawn";
-        }
+        public static string GetMenuPath() => "Spawn";
     }
-
-
 }

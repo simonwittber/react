@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace DifferentMethods.React
 {
-
     /// <summary>
     /// Schedules the child to run in the task list, always returns Continue; The node execute per frame independently of the main tree.
     /// As usual, a node will only execute over multiple frames if some of it's children return NodeState.Tick.
@@ -22,11 +21,6 @@ namespace DifferentMethods.React
             return NodeState.NoResult;
         }
 
-        public override string ToString()
-        {
-            return "Async";
-        }
-
+        public override string ToString() => "Async";
     }
-
 }

@@ -44,10 +44,8 @@ namespace DifferentMethods.React.Editor
                 this.parent = parent;
                 this.index = 0;
                 this.last = true;
-
                 rect.y = rect.yMax - 15;
-
-                rect.height = 15;
+                rect.height = 25;
                 this.rect = rect;
             }
         }
@@ -113,6 +111,7 @@ namespace DifferentMethods.React.Editor
         {
             dragNode = null;
             dropZone = null;
+            // reactor.hotNode = null;
         }
 
         void PerformDrag()
@@ -130,6 +129,7 @@ namespace DifferentMethods.React.Editor
             {
                 oldParent.Remove(dragNode);
             }
+            ExitDrag();
         }
 
         void OnGUIHasBeenDrawn()

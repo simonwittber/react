@@ -31,6 +31,7 @@ namespace DifferentMethods.React.Editor
 
         Root root;
         [SerializeField] BaseNode clipboard;
+
         [NonSerialized] BaseNode dragNode;
 
         Rect cursor;
@@ -341,10 +342,22 @@ namespace DifferentMethods.React.Editor
                 var decorator = reactor.hotNode as DecoratorNode;
                 if (decorator != null)
                 {
-                    var newNode = Activator.CreateInstance(newNodeType) as BaseNode;
-                    decorator.SetChild(newNode);
-                    reactor.hotNode = newNode;
-                    focusFirstControl = true;
+                    if (decorator.Child == null)
+                    {
+                        var newNode = Activator.CreateInstance(newNodeType) as BaseNode;
+                        decorator.SetChild(newNode);
+                        reactor.hotNode = newNode;
+                        focusFirstControl = true;
+                    }
+                    else if (newNodeType.IsSubclassOf(typeof(DecoratorNode)))
+                    {
+                        reactor.hotNode = decorator.Child;
+                        DecorateHotNode(newNodeType);
+                    }
+                    else
+                    {
+                        Debug.LogWarning("Please delete the child node first.");
+                    }
                     EditorUtility.SetDirty(target);
                     Repaint();
                     return true;

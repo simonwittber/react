@@ -111,7 +111,7 @@ namespace DifferentMethods.React.Editor
                         ShowRootContextMenu();
                     }
 
-                    rect.x = EditorGUIUtility.currentViewWidth - 24 - 16 - 24 - 2;
+                    rect.x += rect.width + 16;
                     rect.width = 24;
                     var explorer = EditorGUIUtility.LoadRequired("React/explorer.png") as Texture2D;
                     var oldShowExplorer = reactor.showExplorer;
@@ -138,7 +138,7 @@ namespace DifferentMethods.React.Editor
                             }
                         }
 
-                    rect.x = EditorGUIUtility.currentViewWidth - 24 - 16;
+                    rect.x += rect.width + 8;
 
                     var maximise = EditorGUIUtility.LoadRequired("React/maximise.png") as Texture2D;
                     var minimise = EditorGUIUtility.LoadRequired("React/minimise.png") as Texture2D;
@@ -436,7 +436,7 @@ namespace DifferentMethods.React.Editor
                 if (paletteWindow != null) paletteWindow.Update();
                 if (searchWindow != null) searchWindow.Update();
             }
-            position = GUILayoutUtility.GetRect(Mathf.Max(EditorGUIUtility.currentViewWidth - 49, viewRect.width), viewRect.height);
+            position = GUILayoutUtility.GetRect(Mathf.Min(EditorGUIUtility.currentViewWidth - 64, viewRect.width), viewRect.height);
 
             mousePosition = Event.current.mousePosition;
             PreProcessGraph(root, root);

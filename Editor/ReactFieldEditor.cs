@@ -175,11 +175,7 @@ namespace DifferentMethods.React.Editor
             else if (fi.FieldType.IsSubclassOf(typeof(UnityEngine.Object)))
             {
                 rect.width = 96;
-                var uo = (UnityEngine.Object)value;
-                if (uo == null)
-                    GUI.Label(rect, "None");
-                else
-                    GUI.Label(rect, uo.ToString());
+                fi.SetValue(obj, EditorGUI.ObjectField(rect, GUIContent.none, (UnityEngine.Object)fi.GetValue(obj), fi.FieldType, true));
             }
             else
             {

@@ -51,8 +51,8 @@ namespace DifferentMethods.React.Editor
                 var folderPath = System.IO.Path.GetDirectoryName(AssetDatabase.GUIDToAssetPath(AssetDatabase.FindAssets("t:TextAsset REACT_ROOT_FOLDERS")[0]));
                 System.IO.Directory.CreateDirectory("Assets/Editor Default Resources");
                 System.IO.Directory.CreateDirectory("Assets/Gizmos");
-                FileUtil.CopyFileOrDirectory(folderPath + "/Editor Default Resources/React", "Assets/Editor Default Resources/React");
-                FileUtil.CopyFileOrDirectory(folderPath + "/Gizmos/React", "Assets/Gizmos/React");
+                AssetDatabase.MoveAsset(folderPath + "/Editor Default Resources/React", "Assets/Editor Default Resources/React");
+                AssetDatabase.MoveAsset(folderPath + "/Gizmos/React", "Assets/Gizmos/React");
                 AssetDatabase.Refresh();
             }
         }

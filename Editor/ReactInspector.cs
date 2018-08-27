@@ -15,7 +15,7 @@ namespace DifferentMethods.React.Editor
 
         public override bool RequiresConstantRepaint()
         {
-            return Application.isPlaying;
+            return true;
         }
 
         public override void OnInspectorGUI()

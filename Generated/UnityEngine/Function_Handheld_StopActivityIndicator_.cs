@@ -3,9 +3,6 @@ using UnityEngine;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Executes method call Handheld.StopActivityIndicator on the class, then returns a NoResult state.
-    /// </summary>
     [System.Serializable]
     
     public class Function_Handheld_StopActivityIndicator_ : LeafNode

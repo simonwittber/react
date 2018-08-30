@@ -5,10 +5,6 @@ using System;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Sets Inventory.enabled on the active gameObject to a value. 
-    /// 
-    /// </summary>
     
     [System.Serializable]
     public class Set_Inventory_enabled : LeafNode

@@ -3,10 +3,6 @@ using UnityEngine;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Sets SpriteRenderer.size on the active gameObject to a value. 
-    /// 
-    /// </summary>
     
     [System.Serializable]
     public class Set_SpriteRenderer_size : LeafNode

@@ -3,10 +3,6 @@ using UnityEngine;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Sets Transform.forward on the active gameObject to a value. 
-    /// 
-    /// </summary>
     
     [System.Serializable]
     public class Set_Transform_forward : LeafNode

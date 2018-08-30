@@ -4,10 +4,6 @@ using System;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Sets AudioSource.reverbZoneMix on the active gameObject to a value. 
-    /// 
-    /// </summary>
     
     [System.Serializable]
     public class Set_AudioSource_reverbZoneMix : LeafNode

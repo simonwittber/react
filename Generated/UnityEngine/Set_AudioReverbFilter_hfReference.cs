@@ -4,10 +4,6 @@ using System;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Sets AudioReverbFilter.hfReference on the active gameObject to a value. 
-    /// 
-    /// </summary>
     
     [System.Serializable]
     public class Set_AudioReverbFilter_hfReference : LeafNode

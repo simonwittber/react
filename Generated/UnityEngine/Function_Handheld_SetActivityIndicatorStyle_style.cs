@@ -3,9 +3,6 @@ using UnityEngine;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Executes method call Handheld.SetActivityIndicatorStyle on the class, then returns a NoResult state.
-    /// </summary>
     [System.Serializable]
     
     public class Function_Handheld_SetActivityIndicatorStyle_style : LeafNode

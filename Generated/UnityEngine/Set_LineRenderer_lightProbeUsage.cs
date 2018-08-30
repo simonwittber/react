@@ -4,10 +4,6 @@ using UnityEngine.Rendering;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Sets LineRenderer.lightProbeUsage on the active gameObject to a value. 
-    /// 
-    /// </summary>
     
     [System.Serializable]
     public class Set_LineRenderer_lightProbeUsage : LeafNode

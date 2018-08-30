@@ -4,10 +4,6 @@ using System;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Sets AudioLowPassFilter.cutoffFrequency on the active gameObject to a value. 
-    /// 
-    /// </summary>
     
     [System.Serializable]
     public class Set_AudioLowPassFilter_cutoffFrequency : LeafNode

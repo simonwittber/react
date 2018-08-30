@@ -3,10 +3,6 @@ using UnityEngine;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Sets TrailRenderer.textureMode on the active gameObject to a value. 
-    /// 
-    /// </summary>
     
     [System.Serializable]
     public class Set_TrailRenderer_textureMode : LeafNode

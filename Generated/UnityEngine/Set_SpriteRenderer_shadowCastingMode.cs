@@ -4,10 +4,6 @@ using UnityEngine.Rendering;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Sets SpriteRenderer.shadowCastingMode on the active gameObject to a value. 
-    /// 
-    /// </summary>
     
     [System.Serializable]
     public class Set_SpriteRenderer_shadowCastingMode : LeafNode

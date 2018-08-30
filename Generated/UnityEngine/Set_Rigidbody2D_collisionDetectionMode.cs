@@ -3,10 +3,6 @@ using UnityEngine;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Sets Rigidbody2D.collisionDetectionMode on the active gameObject to a value. 
-    /// 
-    /// </summary>
     
     [System.Serializable]
     public class Set_Rigidbody2D_collisionDetectionMode : LeafNode

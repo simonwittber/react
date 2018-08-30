@@ -3,9 +3,6 @@ using UnityEngine;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Executes method call Input.ResetInputAxes on the class, then returns a NoResult state.
-    /// </summary>
     [System.Serializable]
     
     public class Function_Input_ResetInputAxes_ : LeafNode

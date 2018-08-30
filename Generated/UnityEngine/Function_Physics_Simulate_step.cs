@@ -4,9 +4,6 @@ using System;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Executes method call Physics.Simulate on the class, then returns a NoResult state.
-    /// </summary>
     [System.Serializable]
     
     public class Function_Physics_Simulate_step : LeafNode

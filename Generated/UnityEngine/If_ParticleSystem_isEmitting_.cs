@@ -3,9 +3,6 @@ using UnityEngine;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Executes child if result of ParticleSystem.isEmitting on the active gameObject is true.
-    /// </summary>
     
     [System.Serializable]
     public class If_ParticleSystem_isEmitting_ : DecoratorNode
@@ -23,6 +20,28 @@ namespace React.Generated {
         public override void OnEnable() => Component = gameObject.GetComponent<UnityEngine.ParticleSystem>();
         public override string ToString() => NiceName();
         public static string NiceName() => "IF ParticleSystem.isEmitting";
+        public static string GetMenuPath() => "ParticleSystem/If/isEmitting";
+        public static string Signature() => " ()";
+        public override System.Type GetWrappedType() => typeof(UnityEngine.ParticleSystem);
+    }
+
+    
+    [System.Serializable]
+    public class Not_If_ParticleSystem_isEmitting_ : DecoratorNode
+    {
+
+        protected UnityEngine.ParticleSystem Component { get; set; }
+
+        protected override NodeState Execute() 
+        {
+            if(!Component.isEmitting) 
+                return ExecuteNode(Child);
+            return NodeState.NoResult;
+        }
+
+        public override void OnEnable() => Component = gameObject.GetComponent<UnityEngine.ParticleSystem>();
+        public override string ToString() => NiceName();
+        public static string NiceName() => "IF NOT ParticleSystem.isEmitting";
         public static string GetMenuPath() => "ParticleSystem/If/isEmitting";
         public static string Signature() => " ()";
         public override System.Type GetWrappedType() => typeof(UnityEngine.ParticleSystem);

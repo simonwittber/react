@@ -4,10 +4,6 @@ using System;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Sets Application.targetFrameRate on the class to a value. 
-    /// 
-    /// </summary>
     
     [System.Serializable]
     public class Set_Application_targetFrameRate : LeafNode

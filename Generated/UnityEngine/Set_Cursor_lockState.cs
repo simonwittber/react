@@ -3,10 +3,6 @@ using UnityEngine;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Sets Cursor.lockState on the class to a value. 
-    /// 
-    /// </summary>
     
     [System.Serializable]
     public class Set_Cursor_lockState : LeafNode

@@ -1,3 +1,0 @@
-The condition node exectutes a method on a component, and fails if the method returns a false, or succeeds if the method returns a true.
-
-Condition nodes are generally used inside sequence nodes to abort the sequence if a condition is not met.

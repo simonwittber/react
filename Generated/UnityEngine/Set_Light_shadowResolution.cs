@@ -4,10 +4,6 @@ using UnityEngine.Rendering;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Sets Light.shadowResolution on the active gameObject to a value. 
-    /// 
-    /// </summary>
     
     [System.Serializable]
     public class Set_Light_shadowResolution : LeafNode

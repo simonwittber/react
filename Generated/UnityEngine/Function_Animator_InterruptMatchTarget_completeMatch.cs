@@ -4,9 +4,6 @@ using System;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Executes method call Animator.InterruptMatchTarget on the active gameObject, then returns a NoResult state.
-    /// </summary>
     
     [System.Serializable]
     public class Function_Animator_InterruptMatchTarget_completeMatch : LeafNode

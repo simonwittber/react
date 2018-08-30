@@ -4,9 +4,6 @@ using System;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Executes method call Transform.RotateAround on the active gameObject, then returns a NoResult state.
-    /// </summary>
     
     [System.Serializable]
     public class Function_Transform_RotateAround_point_axis_angle : LeafNode

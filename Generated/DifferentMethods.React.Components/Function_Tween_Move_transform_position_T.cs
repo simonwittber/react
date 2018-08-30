@@ -5,9 +5,6 @@ using System;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Executes method call Tween.Move on the class, then returns a NoResult state.
-    /// </summary>
     [System.Serializable]
     
     public class Function_Tween_Move_transform_position_T : LeafNode

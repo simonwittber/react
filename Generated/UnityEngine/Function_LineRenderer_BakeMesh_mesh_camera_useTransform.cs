@@ -4,9 +4,6 @@ using System;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Executes method call LineRenderer.BakeMesh on the active gameObject, then returns a NoResult state.
-    /// </summary>
     
     [System.Serializable]
     public class Function_LineRenderer_BakeMesh_mesh_camera_useTransform : LeafNode

@@ -5,10 +5,11 @@ using UnityEngine;
 using UnityEditor;
 using DifferentMethods.React;
 using UnityEditorInternal;
+using System.Collections;
+using System;
 
 namespace DifferentMethods.React.Editor
 {
-
     public class ReactFieldEditor
     {
 
@@ -27,10 +28,10 @@ namespace DifferentMethods.React.Editor
                 if (f.Name == "Reactor")
                     continue;
                 if (focus) GUI.SetNextControlName("FirstFocus");
-                if (active)
-                    DrawFieldEditor(f, node);
-                else
-                    DrawFieldLabels(f, node);
+                // if (active)
+                DrawFieldEditor(f, node);
+                // else
+                // DrawFieldLabels(f, node);
             }
             if (node is SuperNode)
                 node.rect.height *= 2;
@@ -268,6 +269,13 @@ namespace DifferentMethods.React.Editor
                 rect.width = 96;
                 fi.SetValue(obj, LayerMaskField(rect, (LayerMask)fi.GetValue(obj)));
             }
+            else if (fi.FieldType == typeof(GameObjectList))
+            {
+                rect.width = 128;
+                var gol = (GameObjectList)fi.GetValue(obj);
+                DrawGameObjectListEditor(rect, gol);
+
+            }
             else if (fi.FieldType.IsSubclassOf(typeof(UnityEngine.Object)))
             {
                 rect.width = 96;
@@ -283,6 +291,27 @@ namespace DifferentMethods.React.Editor
 
             }
             node.rect.width += rect.width + 5;
+            node.rect.height = Mathf.Max(node.rect.height, rect.height);
+        }
+
+        static Dictionary<GameObjectList, ReorderableList> listEditorCache = new Dictionary<GameObjectList, ReorderableList>();
+        static void DrawGameObjectListEditor(Rect rect, GameObjectList gol)
+        {
+            ReorderableList list;
+            if (listEditorCache.TryGetValue(gol, out list))
+                list.DoList(rect);
+            else
+            {
+                list = new ReorderableList(gol.items, typeof(GameObject), draggable: false, displayHeader: false, displayAddButton: true, displayRemoveButton: true);
+                // list.drawHeaderCallback = DrawGameObjectListHeader;
+                list.drawElementCallback = (Rect r, int index, bool isActive, bool isFocused) =>
+                {
+                    r = new Rect(r.x, r.y + 2, r.width - 20, EditorGUIUtility.singleLineHeight);
+                    gol.items[index] = (GameObject)EditorGUI.ObjectField(r, gol.items[index], typeof(GameObject), allowSceneObjects: true);
+                };
+                listEditorCache[gol] = list;
+                list.DoList(rect);
+            }
         }
 
         static void DrawStringArrayField(FieldInfo f, object obj)

@@ -207,7 +207,6 @@ namespace DifferentMethods.React.Editor
                 }
                 if (decorator.Child != null)
                 {
-
                     cursor.x += decorator.rect.width + SPACING.x;
                     cursor.y -= decorator.rect.height + SPACING.x / 2;
                     Draw(decorator.Child, decorator);
@@ -247,7 +246,6 @@ namespace DifferentMethods.React.Editor
             if (node == null)
                 return;
             var visible = IsVisible(node);
-
             node.nodeParent = parent;
             node.rect.y = cursor.y;
             GUI.color = Color.white;
@@ -287,7 +285,7 @@ namespace DifferentMethods.React.Editor
                         focus = true;
                         focusFirstControl = false;
                     }
-                    ReactFieldEditor.DrawFields(node, focus, active: reactor.hotNode == node);
+                    ReactFieldEditor.DrawFields(node, focus, reactor.hotNode == node);
                 }
             }
 
@@ -417,7 +415,6 @@ namespace DifferentMethods.React.Editor
 
         public void OnGUI()
         {
-
             if (target == null) return;
             reactor = target as Reactor;
             root = reactor.Root;

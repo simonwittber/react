@@ -4,9 +4,6 @@ using System;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Executes method call Debug.DrawLine on the class, then returns a NoResult state.
-    /// </summary>
     [System.Serializable]
     
     public class Function_Debug_DrawLine_start_end_color_duration_depthTest : LeafNode

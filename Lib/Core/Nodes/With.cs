@@ -5,7 +5,6 @@ using UnityEngine;
 
 namespace DifferentMethods.React
 {
-
     [System.Serializable]
     [CoreNode]
     public class With : DecoratorNode
@@ -14,7 +13,7 @@ namespace DifferentMethods.React
 
         public override void Configure(Reactor reactor, GameObject context)
         {
-            //switch context to new gameObject.
+            //switch context for children to new gameObject.
             base.Configure(reactor, target);
         }
 
@@ -27,5 +26,4 @@ namespace DifferentMethods.React
 
         public static string GetMenuPath() => "With _w";
     }
-
 }

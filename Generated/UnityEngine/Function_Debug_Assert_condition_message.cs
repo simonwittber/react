@@ -4,9 +4,6 @@ using System;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Executes method call Debug.Assert on the class, then returns a NoResult state.
-    /// </summary>
     [System.Serializable]
     
     public class Function_Debug_Assert_condition_message : LeafNode

@@ -1,3 +1,0 @@
-The if node executes a method on a component, and if the return value is true, it will run it's child and return the childs result.
-
-If the method returns false, this node will fail.

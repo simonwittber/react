@@ -5,9 +5,6 @@ using System;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Returns Success or Failure depending on result of Blackboard.LTE on the active gameObject.
-    /// </summary>
     
     [System.Serializable]
     public class Condition_Blackboard_LTE_name_value : LeafNode
@@ -26,6 +23,29 @@ namespace React.Generated {
         public override void OnEnable() => Component = gameObject.GetComponent<DifferentMethods.React.Components.Blackboard>();
         public override string ToString() => NiceName();
         public static string NiceName() => "CHECK Blackboard.LTE";
+        public static string GetMenuPath() => "Blackboard/Condition/LTE";
+        public static string Signature() => " (name,value)";
+        public override System.Type GetWrappedType() => typeof(DifferentMethods.React.Components.Blackboard);
+    }
+
+    
+    [System.Serializable]
+    public class Not_Condition_Blackboard_LTE_name_value : LeafNode
+    {
+        public string id;
+        public float value;
+
+        protected DifferentMethods.React.Components.Blackboard Component { get; set; }
+
+        protected override NodeState Execute() {
+            if(!Component.LTE(id, value)) 
+                return NodeState.Success;
+            return NodeState.Failure;
+        }
+
+        public override void OnEnable() => Component = gameObject.GetComponent<DifferentMethods.React.Components.Blackboard>();
+        public override string ToString() => NiceName();
+        public static string NiceName() => "CHECK NOT Blackboard.LTE";
         public static string GetMenuPath() => "Blackboard/Condition/LTE";
         public static string Signature() => " (name,value)";
         public override System.Type GetWrappedType() => typeof(DifferentMethods.React.Components.Blackboard);

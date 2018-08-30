@@ -3,9 +3,6 @@ using UnityEngine;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Executes method call Physics2D.IgnoreCollision on the class, then returns a NoResult state.
-    /// </summary>
     [System.Serializable]
     
     public class Function_Physics2D_IgnoreCollision_collider1_collider2 : LeafNode

@@ -4,10 +4,6 @@ using System;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Sets Application.runInBackground on the class to a value. 
-    /// 
-    /// </summary>
     
     [System.Serializable]
     public class Set_Application_runInBackground : LeafNode

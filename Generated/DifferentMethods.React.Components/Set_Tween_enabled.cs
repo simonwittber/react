@@ -5,10 +5,6 @@ using System;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Sets Tween.enabled on the active gameObject to a value. 
-    /// 
-    /// </summary>
     
     [System.Serializable]
     public class Set_Tween_enabled : LeafNode

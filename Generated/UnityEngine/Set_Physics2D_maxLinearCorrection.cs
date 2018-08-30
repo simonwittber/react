@@ -4,10 +4,6 @@ using System;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Sets Physics2D.maxLinearCorrection on the class to a value. 
-    /// 
-    /// </summary>
     
     [System.Serializable]
     public class Set_Physics2D_maxLinearCorrection : LeafNode

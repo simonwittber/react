@@ -4,10 +4,6 @@ using UnityEngine.Audio;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Sets AudioSource.outputAudioMixerGroup on the active gameObject to a value. 
-    /// 
-    /// </summary>
     
     [System.Serializable]
     public class Set_AudioSource_outputAudioMixerGroup : LeafNode

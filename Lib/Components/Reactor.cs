@@ -13,10 +13,7 @@ namespace DifferentMethods.React.Components
     {
 
         public List<Reactor> libraries = new List<Reactor>();
-        public Root Root
-        {
-            get; set;
-        }
+        [HideInInspector] public Root Root;
 
         public bool goLarge = false;
         public bool showExplorer = false;
@@ -33,6 +30,15 @@ namespace DifferentMethods.React.Components
         [NonSerialized] public bool isMissingTypes = false;
         Dictionary<string, SuperNode> exports = new Dictionary<string, SuperNode>();
 
+        public Root GetRoot()
+        {
+            return Root;
+        }
+
+        public void SetRoot(Root root)
+        {
+            this.Root = root;
+        }
 
         void Reset()
         {

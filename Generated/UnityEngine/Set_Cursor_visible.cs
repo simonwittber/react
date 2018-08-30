@@ -4,10 +4,6 @@ using System;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Sets Cursor.visible on the class to a value. 
-    /// 
-    /// </summary>
     
     [System.Serializable]
     public class Set_Cursor_visible : LeafNode

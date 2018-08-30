@@ -3,10 +3,6 @@ using UnityEngine;
 [USING]
 
 namespace React.Generated {
-    /// <summary>
-    /// Sets [NICENAME] on the active gameObject to a value. 
-    /// [HELPTEXT]
-    /// </summary>
     [ATTRIBUTES]
     [System.Serializable]
     public class [CLASSNAME] : LeafNode

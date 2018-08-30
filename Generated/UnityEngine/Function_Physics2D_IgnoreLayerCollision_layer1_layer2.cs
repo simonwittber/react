@@ -4,9 +4,6 @@ using System;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Executes method call Physics2D.IgnoreLayerCollision on the class, then returns a NoResult state.
-    /// </summary>
     [System.Serializable]
     
     public class Function_Physics2D_IgnoreLayerCollision_layer1_layer2 : LeafNode

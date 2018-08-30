@@ -3,9 +3,6 @@ using UnityEngine;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Executes method call Cursor.SetCursor on the class, then returns a NoResult state.
-    /// </summary>
     [System.Serializable]
     
     public class Function_Cursor_SetCursor_texture_hotspot_cursorMode : LeafNode

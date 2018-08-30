@@ -3,9 +3,6 @@ using UnityEngine;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Executes method call Camera.CopyStereoDeviceProjectionMatrixToNonJittered on the active gameObject, then returns a NoResult state.
-    /// </summary>
     
     [System.Serializable]
     public class Function_Camera_CopyStereoDeviceProjectionMatrixToNonJittered_eye : LeafNode

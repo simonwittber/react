@@ -3,10 +3,6 @@ using UnityEngine;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Sets LineRenderer.lightProbeProxyVolumeOverride on the active gameObject to a value. 
-    /// 
-    /// </summary>
     
     [System.Serializable]
     public class Set_LineRenderer_lightProbeProxyVolumeOverride : LeafNode

@@ -4,9 +4,6 @@ using System;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Executes method call Animator.CrossFade on the active gameObject, then returns a NoResult state.
-    /// </summary>
     
     [System.Serializable]
     public class Function_Animator_CrossFade_stateName_normalizedTransitionDuration_layer_normalizedTimeOffset : LeafNode

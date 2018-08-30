@@ -4,9 +4,6 @@ using System;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Executes method call PlayerPrefs.SetString on the class, then returns a NoResult state.
-    /// </summary>
     [System.Serializable]
     
     public class Function_PlayerPrefs_SetString_key_value : LeafNode

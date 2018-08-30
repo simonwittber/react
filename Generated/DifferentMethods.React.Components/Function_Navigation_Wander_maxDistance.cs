@@ -5,9 +5,6 @@ using System;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Executes method call Navigation.Wander on the active gameObject, then returns a NoResult state.
-    /// </summary>
     
     [System.Serializable]
     public class Function_Navigation_Wander_maxDistance : LeafNode

@@ -3,9 +3,6 @@ using UnityEngine;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Executes method call Handheld.Vibrate on the class, then returns a NoResult state.
-    /// </summary>
     [System.Serializable]
     
     public class Function_Handheld_Vibrate_ : LeafNode

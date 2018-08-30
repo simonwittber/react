@@ -3,9 +3,6 @@ using UnityEngine;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Executes method call RemoteSettings.ForceUpdate on the class, then returns a NoResult state.
-    /// </summary>
     [System.Serializable]
     
     public class Function_RemoteSettings_ForceUpdate_ : LeafNode

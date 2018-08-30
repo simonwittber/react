@@ -263,6 +263,8 @@ namespace DifferentMethods.React
                 return true;
             if (t == typeof(GameObject))
                 return true;
+            if (t == typeof(GameObjectList))
+                return true;
 
             return false;
         }

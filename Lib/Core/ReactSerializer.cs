@@ -18,12 +18,12 @@ namespace DifferentMethods.React
         public void Save(IReactor reactor)
         {
             Clear();
-            Serialize(reactor.Root);
+            Serialize(reactor.GetRoot());
         }
 
         public void Load(IReactor reactor)
         {
-            reactor.Root = ((Root)Deserialize());
+            reactor.SetRoot((Root)Deserialize());
         }
 
         public void Clear()
@@ -77,7 +77,7 @@ namespace DifferentMethods.React
                                 if (fi.FieldType.IsSubclassOf(typeof(UnityEngine.Object)))
                                     fi.SetValue(instance, objects.Dequeue());
                                 else
-                                    fi.SetValue(instance, ConvertToValue(fi.FieldType, queue.Dequeue()));
+                                    fi.SetValue(instance, ConvertToValue(fi.FieldType, queue.Dequeue(), objects));
                             }
                             fcmd = queue.Dequeue();
                         }
@@ -99,7 +99,7 @@ namespace DifferentMethods.React
             return BitConverter.GetBytes(u);
         }
 
-        object ConvertToValue(Type t, string obj)
+        object ConvertToValue(Type t, string obj, Queue<UnityEngine.Object> objects)
         {
             if (t == typeof(string))
                 return obj;
@@ -149,6 +149,15 @@ namespace DifferentMethods.React
             {
                 LayerMask lm = BitConverter.ToInt32(ToBytes(obj, 0), 0);
                 return lm;
+            }
+
+            if (t == typeof(GameObjectList))
+            {
+                var count = BitConverter.ToInt32(ToBytes(obj, 0), 0);
+                var array = new GameObjectList();
+                for (var i = 0; i < count; i++)
+                    array.Add((GameObject)objects.Dequeue());
+                return array;
             }
 
             throw new NotImplementedException("Serializer: " + t.ToString());
@@ -203,8 +212,17 @@ namespace DifferentMethods.React
             }
             if (t.IsEnum)
                 return ToRepr((int)obj);
+
             if (t == typeof(LayerMask))
                 return ToRepr(((LayerMask)obj).value);
+
+            if (t == typeof(GameObjectList))
+            {
+                var array = (GameObjectList)obj;
+                for (var i = 0; i < array.Count; i++)
+                    references.Add((GameObject)array[i]);
+                return ToRepr(array.Count);
+            }
 
             throw new NotImplementedException("Serializer: " + obj.ToString());
         }

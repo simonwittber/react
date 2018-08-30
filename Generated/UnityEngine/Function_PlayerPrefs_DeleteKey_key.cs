@@ -4,9 +4,6 @@ using System;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Executes method call PlayerPrefs.DeleteKey on the class, then returns a NoResult state.
-    /// </summary>
     [System.Serializable]
     
     public class Function_PlayerPrefs_DeleteKey_key : LeafNode

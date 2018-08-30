@@ -4,9 +4,6 @@ using DifferentMethods.React.Components;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Executes method call Blackboard.Dump on the active gameObject, then returns a NoResult state.
-    /// </summary>
     
     [System.Serializable]
     public class Function_Blackboard_Dump_ : LeafNode

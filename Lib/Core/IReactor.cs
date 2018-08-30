@@ -2,6 +2,7 @@ namespace DifferentMethods.React
 {
     public interface IReactor
     {
-        Root Root { get; set; }
+        Root GetRoot();
+        void SetRoot(Root root);
     }
 }

@@ -4,10 +4,6 @@ using System;
 
 
 namespace React.Generated {
-    /// <summary>
-    /// Sets Debug.developerConsoleVisible on the class to a value. 
-    /// 
-    /// </summary>
     
     [System.Serializable]
     public class Set_Debug_developerConsoleVisible : LeafNode

@@ -3,9 +3,6 @@ using UnityEngine;
 [USING]
 
 namespace React.Generated {
-    /// <summary>
-    /// Executes method call [NICENAME] on the class, then returns a NoResult state.
-    /// </summary>
     [System.Serializable]
     [ATTRIBUTES]
     public class [CLASSNAME] : LeafNode

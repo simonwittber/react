@@ -3,9 +3,6 @@ using UnityEngine;
 [USING]
 
 namespace React.Generated {
-    /// <summary>
-    /// Returns Success or Failure depending on result of [NICENAME] on the class.
-    /// </summary>
     [ATTRIBUTES]
     [System.Serializable]
     public class [CLASSNAME] : LeafNode
@@ -20,6 +17,25 @@ namespace React.Generated {
 
         public override string ToString() => NiceName();
         public static string NiceName() => "CHECK [NICENAME]";
+        public static string GetMenuPath() => "[MENUPATH]";
+        public static string Signature() => "[SIGNATURE]";
+        public override System.Type GetWrappedType() => typeof([COMPONENTTYPE]);
+    }
+
+    [ATTRIBUTES]
+    [System.Serializable]
+    public class Not_[CLASSNAME] : LeafNode
+    {
+[FIELDS]
+        [COMPONENT_DEC]
+        protected override NodeState Execute() {
+            if([CODE])
+                return NodeState.Success;
+            return NodeState.Failure;
+        }
+
+        public override string ToString() => NiceName();
+        public static string NiceName() => "CHECK NOT [NICENAME]";
         public static string GetMenuPath() => "[MENUPATH]";
         public static string Signature() => "[SIGNATURE]";
         public override System.Type GetWrappedType() => typeof([COMPONENTTYPE]);

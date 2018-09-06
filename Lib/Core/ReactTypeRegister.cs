@@ -48,20 +48,33 @@ namespace DifferentMethods.React
         }
 
         public static List<ReactNodeType> nodeTypes = new List<ReactNodeType>();
-
+        public static Dictionary<string, Type> typeCache = new Dictionary<string, Type>(4096);
         public static Type Find(string className)
+        {
+            Type cachedType;
+            if (!typeCache.TryGetValue(className, out cachedType))
+            {
+                cachedType = typeCache[className] = System.Type.GetType(className);
+                if (cachedType == null)
+                    cachedType = typeCache[className] = _Find(className);
+            }
+            return cachedType;
+        }
+
+        static Type _Find(string className)
         {
             foreach (var t in AllTypes)
             {
-                if (t.type.AssemblyQualifiedName == className) return t.type;
-                if (t.type.FullName == className) return t.type;
-                if (t.type.Name == className) return t.type;
+                var aqn = t.type.AssemblyQualifiedName;
                 var commaIndex = className.IndexOf(',');
                 if (commaIndex > 0)
                 {
                     var classOnly = className.Substring(0, commaIndex);
-                    if (t.type.AssemblyQualifiedName.Contains(classOnly)) return t.type;
+                    if (aqn.Contains(classOnly)) return t.type;
                 }
+                if (aqn == className) return t.type;
+                if (t.type.FullName == className) return t.type;
+                if (t.type.Name == className) return t.type;
             }
             return null;
         }

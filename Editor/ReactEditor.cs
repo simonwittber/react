@@ -400,17 +400,22 @@ namespace DifferentMethods.React.Editor
         [DidReloadScripts]
         static void CreateMissingTypes()
         {
+            var refresh = false;
             foreach (var i in ReactSerializer.missingTypes)
             {
                 var rcc = DifferentMethods.React.Generation.ReactCandidateClass.Find(i);
                 if (rcc != null)
                 {
+                    refresh = true;
                     DifferentMethods.React.Generation.ReactGenerator.GetClass(rcc);
                     Debug.Log("Creating new class: " + i);
                 }
             }
-            AssetDatabase.SaveAssets();
-            AssetDatabase.Refresh();
+            if (refresh)
+            {
+                AssetDatabase.SaveAssets();
+                AssetDatabase.Refresh();
+            }
         }
 
         public void OnGUI()

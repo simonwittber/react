@@ -200,15 +200,22 @@ namespace DifferentMethods.React.Editor
             // clock.Start();
             foreach (var registeredType in ReactTypeRegister.AllTypes)
             {
-                if (registeredType.niceName.ToLower() == search)
+                var searchText = registeredType.niceName.ToLower();
+                if (searchText == search)
                 {
                     searchResults.Insert(0, new SearchResult() { niceName = registeredType.niceName, type = registeredType.type, signature = registeredType.signature });
                     continue;
                 }
                 var add = true;
+                var excludeNot = true;
+                if (qs.Length >= 2 && qs[0] == "if" && qs[1] == "not")
+                {
+                    excludeNot = false;
+                }
+                if (excludeNot && searchText.StartsWith("if not")) continue;
                 foreach (var q in qs)
                 {
-                    if (!registeredType.niceName.ToLower().Contains(q))
+                    if (!searchText.Contains(q))
                     {
                         add = false;
                     }

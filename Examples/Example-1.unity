@@ -232,22 +232,23 @@ MonoBehaviour:
   Root:
     rect:
       serializedVersion: 2
-      x: 3
-      y: 1081
-      width: 169
-      height: 24
+      x: 0
+      y: 0
+      width: 0
+      height: 0
     Children:
     - rect:
         serializedVersion: 2
-        x: 16
-        y: 1112
-        width: 77
-        height: 24
+        x: 0
+        y: 0
+        width: 0
+        height: 0
   goLarge: 0
   showExplorer: 0
-  hotNodePath: 00000000
+  hotNodePath: 00000000000000000000000000000000
   serializer:
     references:
+    - {fileID: 46817077}
     - {fileID: 46817077}
     - {fileID: 46817077}
     - {fileID: 46817077}
@@ -275,6 +276,13 @@ MonoBehaviour:
     - '}'
     - '['
     - new
+    - DifferentMethods.React.Sequence, DifferentMethods.React.Lib, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    - '{'
+    - Reactor
+    - '}'
+    - '['
+    - new
     - React.Generated.Function_Transform_Rotate_axis_angle, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     - '{'
@@ -286,6 +294,7 @@ MonoBehaviour:
     - 3ED0A6D8
     - Reactor
     - '}'
+    - ']'
     - ']'
     - ']'
     - ']'
